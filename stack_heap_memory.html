@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Stack and Heap Memory</h1>
+    
+    <h2>Primirtive datatypes are use Stack and Reference or non primitive data types are use Heap memory</h2>
+
+    <h3>When we use Stack memore then we get a copy of that variable or anything what we've declared and when we use Heap memory then we get the reference of that variable or anything what we've declared</h3>
+
+
+    <script>
+
+        /////////////////////////////////////////////////////   Stack (primitive datatypes)
+        let name = "youtube"
+
+        let anotherName = name;
+
+        console.log('name : ',name);   // it prints youtube as usual
+        console.log('anotherName : ',anotherName);   // it will print youtube as well because it is having the value of name
+
+        // let's change the value of anotherName
+        anotherName = 'facebook'  
+        console.log('anotherName : ',anotherName);    // now it will print facebook as the value of anotherName is changed
+
+        console.log('name : ',name)  // here it will print youtube, because it's value is remain the same
+
+
+
+        ////////////////////////////////////////////  Heap Memory  (non-primitive datatypes or reference datatype)
+
+        let userOne = {
+            email : "pratap@gmail.com",
+            ph : 757575
+        }
+
+        let userTwo = userOne;
+
+        console.log('userOne : ',userOne)   // it will print it's values
+        console.log('userTwo : ',userTwo)  // it will print userOne's values
+
+        // now try to change the userTwo's vales
+
+        userTwo.email = 'pratap@google.com'
+
+        console.log('userTwo : ',userTwo);   // it's values are changed as we change it values
+
+        console.log('userOne : ',userOne);  // here we can see the userOne's values are also changed because we are haveing the reference of the values of userOne in userTwo, so actually we made the changes in the original value
+
+
+
+
+    </script>
+</body>
+</html>

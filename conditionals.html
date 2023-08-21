@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booleans</title>
+</head>
+<body>
+
+    <h1>conditional</h1>
+
+    <h3>if-else, else-if, turnary-ooperators</h3>
+    
+    <script>
+        if(3<5){
+            console.log(true)
+        }
+        else{
+            console.log(false)
+        }
+
+        if(0){
+            console.log('anything')    // doesn't print anything because 0 is false, instade of 0 every value is true even 0.00000001 is true, -1,-77,-999.... will print the anyting in console 
+            
+        }
+        if(-1){
+            console.log('anything')    // will print the anyting in console 
+            
+        }
+
+
+        console.log(!0)    // will give true
+
+        console.log('text' / 5);   //will give NAN
+
+
+        let anything;
+        console.log(anything);  // will give undefined
+        console.log(something);  // this will pring 'Uncaught ReferenceError: k is not defined' int the console 
+
+
+
+        const result= 0 ? 'true' : 'false'
+        console.log(result);
+
+
+    </script>
+</body>
+</html>

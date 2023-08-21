@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>there are two types of data in javascript</h1>
+    <h3>1. primitive type -- null,number,string,boolean,undefine</h3>
+    <h3>2. reference type -- [], {}, ()  ->   array, object, function</h3>
+</body>
+
+<script>
+    let a=[1,2,3,4,5,6,7,8];
+    console.log('the values of a',a);
+    let b=a;
+    console.log('the values of b',b)     // it will give the value as same as what is having a
+
+    b.pop();    // but if we want to change a value from b
+    console.log(b)
+    console.log(a)  // but if we want to change a value from b, then we can see that the values of b is changed but the values of a is change at the same time with b. 
+
+    // because 'b = a'    means we are not copying the values of 'a' into 'b', basically we are usig the values of a into b
+
+    // to overcome this porblem and to copy an array in to another variable we use spread operator '...'
+    let m = [1,2,3,4]
+    console.log('the values of m',m);
+
+    let n = [...m]   // here we've used spread operators to copy the values of 'm' into 'n'
+    console.log('the values of n',n);
+
+    n.pop();   // now we are changing the value of 'n' where values are copied from 'm'
+
+    console.log('after changing the values of n', n)
+    console.log('after changing the values of n printing m', m)   // here we can see that the values of m is still the same because of the spread operator
+</script>
+</html>

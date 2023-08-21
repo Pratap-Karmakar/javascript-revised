@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Comparision</h1>
+    <h3>'==' checks only two values, and '===' checks the two values and their datatypes as well</h3>
+
+
+    <script>
+
+        console.log("String vs Number")
+        console.log("2" > 1);   // this will print true
+        console.log("02" > 1);   // this will print true 
+
+
+        console.log("null vs zero")
+        console.log(null > 0)   // false
+        console.log(null < 0)   // false
+        console.log(null == 0)  // false
+
+
+        console.log(null >= 0)  // true, the reason is that an equality check == nad a comparisions > >= < <= works differently. comparisions convert null to a number, treating it as 0. 
+        console.log(null <= 0)  // true, same as above
+
+
+        console.log("undefined vs zero")
+        console.log(undefined == 0)  // false
+        console.log(undefined > 0)   // false
+        console.log(undefined < 0)   // false
+        console.log(undefined >= 0)  // false
+        console.log(undefined <= 0)  // false
+
+
+        console.log("== vs ===");
+        console.log("2" == 2)  // true, because it conver the string 2 in to number and then check it with the number 2 where only the values are get checked
+        
+        console.log('2' === 2) // false, because in this case the convarsion does not take place and sthe string 2 gets compared with the number 2 where the values and their datatypes are get checked and get the result as false
+    </script>
+</body>
+</html>

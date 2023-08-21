@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Conversions Operations</h1>
+
+
+    <script>
+        let score = 33;
+
+        console.log(typeof score);        // this will print the type of the value, in this case which is number
+        console.log(typeof (score));      // this will aslo print the type of the value which is number, here jsut the way of writing is different
+
+
+        let score1 = "33"
+        console.log(typeof score1)  // this will print the type of the value as string because the value is in the double quotes "".
+
+        // to convert the string in ti number
+        let valueInNumber = Number(score1);  // this will change the type of the value of score1  from 'string' to 'number' . because we have used 'Number()' so everything written in the  brackets() will be printed as numbers
+        console.log(score1)
+        
+        
+        let score2 = '33ggg'
+        console.log(typeof(score2))  // this will print the type of the value as string
+
+        // to convert the string in ti number
+        let anything = Number(score2);
+        console.log(score2);  // this will print the value of the code as number.
+
+        console.log(anything)  // this will print NaN
+
+
+        
+
+        // let isLoggedIn = 'yteroyt';    // if we give any string then that will print true
+        // let isLoggedIn = ' ';      // if we give any empty string then it will print false
+        let isLoggedIn = 77;     // only 0 will give false otherwise everything will be true
+
+        // to conver the number in to boolean
+        let booleanIsLoggedIn = Boolean(isLoggedIn);
+ 
+        console.log(booleanIsLoggedIn);
+
+
+
+
+        let someNumber = 44;
+
+        let stringNumber = String(someNumber);
+
+        console.log(stringNumber);    // this will print 44 but it's type is changed from number to string, as we check it's type
+
+        console.log(typeof(stringNumber));
+
+    </script>
+</body>
+</html>

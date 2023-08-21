@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hoisting</h1>
+
+    <h3>variable and functions are hoisted which means their declaration is moved onthe to of the code</h3>
+
+    <script>
+
+        // var a = 2;   // javascript covert this line in to two lines 1) var a; and 2) a = 2;
+
+        console.log(a)  // now it is asumed that the 'var a' means the declaration part of a is go to to the to and if we console the variable which is 'a' before it's declaration it will not through any error instade of that it will through 'undefined'. because it is asumed that the 'var a' is in the top and then comes 'console.log(a)'  and then comes the initialization part which is 'a = 2'. so as we console.log the value of 'a' and we have not initilize any value to 'a' thus it is showing 'undefine'
+
+        var a;  // this is called variable declaration 
+        a = 2;  // this is called initilization
+
+        // now it is asumed that the 'var a' means the declaration part of a is go to to the top and if we console the variable which is 'a' before it's declaration it will not through any error instade of that it will through 'undefined'
+
+
+
+     
+
+       // now if we use 'let' instade of 'var'
+       
+       console.log(m);   // it is throwing and error of ----> 'Cannot access 'm' before initialization'
+       let m;
+       m = 4;
+
+    </script>
+</body>
+</html>

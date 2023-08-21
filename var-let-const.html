@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>var, let, const</h1>
+    <h3>var is functional scoped</h3>
+    <h3>let is braces scoped</h3>
+
+    <script>
+        const lab=()=>{
+            for (var i=0;i<=10;i++){   
+            console.log(i)  // it will print the for loop till 10
+            }
+            console.log(i)   // it will print 11 after 10 because we have used 'var' there and 'var' is function scoped that's why we can access the i outside of the function. if we use 'let' there then this console.log(i) will get an error that i is not defined because 'let' is braces '{}' scopped
+        }
+        lab();
+        console.log(i)   // it will give error because i is not defined
+    </script>
+</body>
+</html>

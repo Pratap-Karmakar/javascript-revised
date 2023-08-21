@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Functions</h1>
+
+        <script>
+        // function function1(){
+        //     console.log('anything')
+        //     console.log(2+2)
+        // }
+        // function1();
+
+        // console.log(a)
+        // let a
+        // a=1;
+
+
+        // function anything(a,b,c,d){  //here (a,b,c,d) are parameters, which are variables jisme value store hoti hai arguments wali
+        //     console.log(a,b,c,d);
+        // }
+        // anything(1,2,3,4);  // arguments are the real value jo hum dete hai function chalaate tim\\e
+
+
+        const lab=()=>{
+            for (var i=0;i<=10;i++){   
+            console.log(i)  // it will print the for loop till 10
+            }
+            console.log(i)   // it will print 11 after 10 because we have used 'var' there and 'var' is function scoped that's why we can access the i outside of the function. if we use 'let' there then this console.log(i) will get an error that i is not defined because 'let' is braces '{}' scopped
+        }
+        lab();
+        console.log(i)   // it will give error because i is not defined
+
+
+        // function abcd(){
+        //     var a=1;
+        //     console.log("this is the first console log from abcd",a);
+        //     function defg(){
+        //         var b=2;
+        //         console.log("we are accessing a from defg",a);
+        //         console.log("this is the second console log from defg",b)
+        //     }
+        //     defg();
+        //     console.log("this is the second console log from abcd after the defg function aand accessing a",a)
+        //     // console.log("this is the third console log from abcd after the defg function aand accessing b",b)
+        // }
+        // // console.log("accessing a from outside of the abcd function",a)
+        // // console.log("accessing b from outside of the abcd function",b)  
+        // abcd();
+    </script>
+    </body>
+</html>
