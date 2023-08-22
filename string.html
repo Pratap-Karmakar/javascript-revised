@@ -10,7 +10,73 @@
 
 
     <script>
+        let name = 'pratap';
+        let repoCount = 30;
+
+        // this is call string interpolation
+        console.log(`hi my name is ${name} and my repository count is ${repoCount}`)
+
+
+        // are creating a new instance of the `String` object in JavaScript. The `String` object is a built-in constructor in JavaScript that represents a sequence of characters. In this case, you are passing the string `'pratap'` as an argument to the String constructor.
+
+        const gameName = new String ('pratap');
+
+
+        console.log('printing the 2th index value : ',gameName[2]);
+
+        // to view all the objects from prototypes regarding a string
+        console.log('all prototypes : ',gameName.__proto__)
         
+        // to get the length of a string 
+        console.log('string length : ',gameName.length)
+
+        // to change the string to uppercase 
+        console.log('toUpperCase : ',gameName.toUpperCase());
+
+        // to view which index is having which character
+        console.log('charAt : ',gameName.charAt(4))
+
+        // to view which character is in which index
+        console.log('indsexOf : ',gameName.indexOf('t'))
+
+        // to break a part or one character from a string
+        let newString = gameName.substring(0,4);
+        console.log('substring : ',newString) // here we can see that we give the number from index 0 to index 4, but in the console we are getting the value till the 3 index, that means the last index we have gave is not comming in the console
+        //  When accessing characters in a string using indices, the ending index you provide is not included in the output. So if you specify indices 0 to 4, you'll get characters from index 0 to index 3.  
+
+        
+        let anotherString = gameName.slice(0,4);
+        console.log('slice : ',anotherString);
+
+        // we can give negative values in slice method
+        let aString = 'abcdefgh'
+        let someString = aString.slice(-7,4);
+        console.log('slice : ',someString);
+
+
+        // use of trim
+        let newStringOne = "     pratap   ";
+        console.log('trim : ',newStringOne);  // it is having the extra spaces
+        console.log('trim : ',newStringOne.trim())  // by using trim() we have remove the extra spaces
+
+
+        // use of replace
+        let url = "https://pratapkarmakar.com/pratap%20karmakar";
+        console.log('replace : ',url.replace('%20','-'));  // by using replace() we can replace anything with anything
+
+
+        // include()
+        console.log('includes : ',url.includes('pratap'));   // it will print true as the url is having pratap in it
+        console.log('includes : ',url.includes('rana'));    // it will print false as the url is not having rana in it
+
+
+        // split()
+        let stringTwo = 'aa bb cc dd ee ff gg'
+        console.log('split : ',stringTwo.split(' '));  // this split function will split the string by spaces and give us an array,
+
+        // we can split a string by anything present in the string and get ans array
+        let stringTwoOne = 'aa-bb-cc-dd-ee-ff-gg'
+        console.log('split : ',stringTwoOne.split('-'))  // this will split the string by - and give us an array
     </script>
 </body>
 </html>
