@@ -1,14 +1,9 @@
-let anything=5;
-console.log('first',anything)
+import React from 'react'
 
+const index = () => {
+  return (
+    <div>index</div>
+  )
+}
 
-anything=6;
-console.log('second',anything)
-
-anything= anything+1
-
-console.log(anything)
-
-
-console.log(a);
-let a=1;
+export default index

@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Numbers and Maths</h1>
+
+
+    <script>
+        const score = 500;
+        console.log('print score : ',score);     // it will print as number
+
+        const balance = new Number(700);
+        console.log('print as new Number() : ',balance)    // it will only surely print as number also shows the prototypes
+
+        console.log('convert the number in to string : ',balance.toString());  // it will convert the number in to string
+
+        console.log('convert the number in to string : ',balance.toString().length);  // it will convert the number in to string and show it's length
+        
+        console.log('prints the typeof the balance : ',typeof(balance));   // it prints object as we create this using new Number() methode.
+
+        console.log(balance.toFixed(2));   // it will fixed the bumber by .00 as here it prints 700.
+
+
+        // Precision ***      ****it returns string****
+
+        const otherNumber = 23.8966
+        console.log(otherNumber.toPrecision(3))   // print 23.9 all total 3 value
+
+        const otherNumber1 = 123.8966 
+        console.log(otherNumber1.toPrecision(3))  // print 124, it roundup the number and print 124
+
+        const otherNumber2 = 1123.8966
+        console.log(otherNumber2.toPrecision(3))  // prints 1.12e+3, so we need to use  toPrecision() verry carefully
+
+
+        const longNumber= 1000000000;
+        console.log(longNumber.toLocaleString())  // it will add comma in the number so it's look better (use us comma)   1,000,000,000
+        console.log(longNumber.toLocaleString('en-IN'))  // looks like indian number   1,00,00,00,000
+
+
+
+        // +++++++++++++++++++++++++++++++ Maths +++++++++++++++++++++++++++++++
+
+        console.log(Math);
+
+        console.log('Math.abs() : ',Math.abs(-4));   // abs - absolute, by using abs it's only convert negative values into positive, can't covert positive into negative
+
+        console.log('round(5.3) : ', Math.round(5.3))   // it round the number like here it prints 5
+        console.log('round(5.4) : ', Math.round(5.6))   // it round the number like here it prints 6
+
+        console.log('ceil(4.2 -> 5) : ',Math.ceil(4.2)); // it rounds the number by top value as here 5
+        console.log('ceil(4.9 -> 4) : ',Math.floor(4.9)); // it rounds the number by lowest value as here 4
+
+        console.log('minimum number : ', Math.min(3,6,9,2,5));
+        console.log('maximum number : ', Math.max(3,6,9,2,5));
+
+
+        console.log('random() : ', Math.random());   // it prints different value every time between 0 to 1
+
+
+        // as Math.random() give value between 0 to 1, 
+        console.log('value between 0 to 10 : ', Math.random()*10)    // if we want value between 0 to 10, it'll give 0
+        console.log('value between 0 to 10 : ', ((Math.random()*10) + 1))    // if we want value between 1 to 10, it will not give 0, it stats from 1
+
+        console.log('single value between 0 to 10 : ', Math.round(((Math.floor()*10) + 1)))  // to get single value
+
+
+        // to get the valu between 10 to 20
+        const min = 10;
+        const max = 20;
+
+        console.log(Math.floor(Math.random() * (max - min) +1) + min) // prints value between 10 to 20
+
+        // (max - min) +1)  --->   to get the range between 10 to 20, and  + 1  to avoid 0 values
+        // + min   --->    to get the minimum value of 10
+
+    </script>
+</body>
+</html>

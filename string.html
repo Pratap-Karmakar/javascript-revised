@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>String</h1>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>String</h1>
 
-
-    <script>
+        <script>
         let name = 'pratap';
         let repoCount = 30;
 
@@ -77,6 +76,47 @@
         // we can split a string by anything present in the string and get ans array
         let stringTwoOne = 'aa-bb-cc-dd-ee-ff-gg'
         console.log('split : ',stringTwoOne.split('-'))  // this will split the string by - and give us an array
+
+
+
+        
+        // useful string properties & methods
+
+        let myName = "Bro Code";
+        let myStreet = "123 Fake st.";
+        let myCity = "Nowhere XY 12345";
+        let myPhone = "123-456-7890";
+
+        console.log(myName.length);
+        console.log(myName.charAt(0));
+        console.log(myName.indexOf(" "));
+        console.log(myName.lastIndexOf("o"));
+        console.log(myName.trim());
+        console.log(myName.toUpperCase());
+        console.log(myName.toLowerCase());
+
+        //let firstName = myName.slice(0, 3);
+        let firstName = myName.slice(0, myName.indexOf(" "));
+        console.log(firstName);
+
+        //let firstName = myName.slice(4);
+        let lastName = myName.slice(myName.lastIndexOf(" ") + 1);
+        console.log(lastName);
+
+        let myAddress = myStreet.concat(" ", myCity);
+        console.log(myAddress);
+
+        myPhone = myPhone.replaceAll("-","");
+        console.log(myPhone);
+
+
+
+        /////////////////////////////////// use for looop to print a string
+
+        let str = 'anythig'
+        for (let i=0; i<=str.length; i++){
+            console.log(str[i]);
+        }
     </script>
-</body>
+    </body>
 </html>
