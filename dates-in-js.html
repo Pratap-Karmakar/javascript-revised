@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Dates in JS</h1>
+
+    <script>
+      console.log("*************************some date methods");
+      let myDate = new Date();
+
+      console.log("toString() : ", myDate.toString());
+
+      console.log("toDateTimeString() : ", myDate.toTimeString());
+
+      console.log("toDateString() : ", myDate.toDateString()); //**** // show date name, month name
+      console.log("toUTCString() : ", myDate.toUTCString()); // show date name, month name and the time in 24hr format as well
+
+      console.log("toISOString() : ", myDate.toISOString()); // smae as toJSON()
+
+      console.log("toJSON() : ", myDate.toJSON()); // smae a toISOString()
+
+      console.log("toLocaleDateString() : ", myDate.toLocaleDateString()); //****  // shows the date using '/'
+      console.log("toLocaleString() : ", myDate.toLocaleString()); //**** // show the date as well as the time using '/'
+
+      console.log("the type of the Date() : ", typeof myDate); //+++++++++++ the type of date is object
+
+      console.log("**************************how to create custom date");
+
+      // to create a custom date
+      let myCreatedDate = new Date(2023, 0, 23); // months start from 0 so that, 0 is became januart
+
+      console.log("my created date ---> ", myCreatedDate.toDateString());
+
+      // to create a custom date and time
+      let myCreatedDate1 = new Date(2023, 0, 23, 5, 4, 55); // months start from 0 so that, 0 is became januart
+
+      console.log(
+        "my created date and time ---> ",
+        myCreatedDate1.toLocaleString()
+      );
+
+      // to create the date by this as well
+      let myCreatedDate2 = new Date("2023-01-25"); // here month starts from 01 which meand january
+
+      console.log(
+        "my created custom month ---> ",
+        myCreatedDate2.toLocaleString()
+      );
+
+      // we can manipulate the date format as well
+
+      let myCreatedDate3 = new Date("01-25-2023");
+
+      console.log(
+        "my created custom month ---> ",
+        myCreatedDate3.toLocaleString()
+      );
+
+
+
+
+
+
+
+      //++++++++++++++++++++++++++++ to get day, month, year, hour, mionute, second
+      console.log(
+        "**************************to get day, month, year, hour, mionute, second"
+      );
+      let anyDate = new Date();
+      console.log("day --> ", anyDate.getDate());
+      console.log("month --> ", anyDate.getMonth());
+      console.log("year --> ", anyDate.getFullYear());
+      console.log("hour --> ", anyDate.getHours());
+      console.log("minute --> ", anyDate.getMinutes());
+      console.log("second --> ", anyDate.getSeconds());
+      console.log("milli seconds --> ", anyDate.getMilliseconds());
+
+
+
+
+
+
+      //++++++++++++++++++++ TimeStamp
+      console.log("**************************TimeStamp");
+
+      let myTimeStamp = Date.now();
+
+      console.log(myTimeStamp);
+
+      
+
+
+
+      //+++++++++++++++++++++++++++++++++++++ cuatomise date  
+      console.log('**************************customise date');
+      const customiseDate = new Date();
+
+      const formattedDate = customiseDate.toLocaleString("default", {
+        // weekday: 'long',
+        month: "long",
+      });
+
+      console.log("formatted date: ", formattedDate);
+      console.log("day of the month: ", customiseDate.getDate());
+
+    </script>
+  </body>
+</html>
