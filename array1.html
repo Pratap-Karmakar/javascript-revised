@@ -83,7 +83,7 @@
 
 
 
-    //+++++++++++++++++++++++++++++++++++++++++ SLICE and SPLICE and their Differences
+    console.log('+++++++++++++++++++++++++++++++++++++++++ SLICE and SPLICE and their Differences')
 
 
 
@@ -94,15 +94,15 @@
     // A, B, C will define the main array's (arrNew) current state
 
     let sliceArr = arrNew.slice(1,3);
-    console.log('Slice Array : ',sliceArr);  // in slice methode it doesn't includes the range means it removes till one element berfore the range means given '0 to 3' removes '0 tot 2' 
+    console.log('Slice Array : ',sliceArr);  // in slice methode it doesn't includes the range means it returns a new array with values from 'index 1 to index 2', and it doesn't include 'index 3'. by using slice method it doesn't change the original array.
 
     console.log(' Main array (arrNew) - B :',arrNew);  // after appling slice methode the main array 'arrNew' is still the same
 
 
     let spliceArr = arrNew.splice(1,3);
-    console.log('Splice Array : ',spliceArr);  // in splice methode includes the range and remove them like here it includes 3 as well
+    console.log('Splice Array : ',spliceArr);  // in splice methode includes the range and remove them like here it includes 3 as well and create a new array with the values of the array from 'index 1 to index 3'
     
-    console.log(' Main array (arrNew) - C :',arrNew);  // after appling the 'splice' methode the main array 'arrNew' is changed, splice methode remove the elements from the amin array too according to the given range and also in splice methode the range is includes
+    console.log(' Main array (arrNew) - C :',arrNew);  // after appling the 'splice' methode the main array 'arrNew' will changed, splice methode will remove the elements from the amin array according to the given range and also in splice methode the range is includes
 
     
 
