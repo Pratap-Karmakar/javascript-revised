@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Objects 2</h1>
+    <h3>More in object 1</h3>
+    <h1>Objects can be singletone or objects literals, this is about singletone or how can we declare a object using constructor</h1>
+
+
+    <script>
+        const anything = new Object()    // this is singletone
+        console.log(anything);    // this will return an empty object
+
+        const anything2 = {}   // this is non-singletone
+        console.log(anything2);   // this will return an eempty object
+
+
+        // to add some values in the empty array
+        
+        const obj = {}
+
+        obj.name = "Pratap";
+        obj.main = "pratap@google.com";
+        obj.isLoggedIn = false;
+
+        console.log(obj);
+
+
+
+        // Nested Object ++++++++++++++++++++++++++++++++++++
+
+        const regularObj = {
+            mail : "pratapkarmakar@google.com",
+            fullname : {
+                userfullname : {
+                    firstnAme : "Pratap",
+                    lastname : "Karmakar"
+                }
+            }
+        }
+
+        console.log(regularObj["fullname"]);
+        console.log(regularObj["fullname"]["userfullname"]);
+        console.log(regularObj["fullname"]["userfullname"]["firstnAme"]);
+
+
+
+        // Merge the objects ++++++++++++++++++++++++++++++++++++
+
+        const obj1 = { 1 : "a", 2 : "b" }
+        const obj2 = { 3 : "c", 4 : "d" }
+        const obj3 = { 5 : "e", 6 : "f" }
+
+        // using spread operator  +++++++++++++++++++ this is the best useful way
+        const objMerge1 = {...obj1, ...obj2, ...obj3}
+        console.log('objeMerge1 : ',objMerge1);
+        console.log('objeMerge1 type : ',typeof(objMerge1));
+
+        // using Object.asing()
+        const objMerge2 = Object.assign({}, obj1, obj2, obj3);  // {} --> this empty braces measns it is guranteed that it will returns an object
+        console.log('objMerge2 : ',objMerge2);
+        console.log('objeMerge2 type : ',typeof(objMerge2));
+
+
+
+        // to ptint the keys of the object  +++++++++++++++++++++++++++
+        const user = {
+            name : "Pratap",
+            id : 1,
+            isLoggedIn : false,
+            mail : "pratap@google.com"
+        }
+
+        console.log(Object.keys(user));    // it returns an 'array' with the keys of the 'user' object
+        console.log(Object.values(user))   // it returns an 'array' with the values of the 'user' object
+        console.log(Object.values(user).length)  // it wil print the length of the array created with the valuies of the 'user object'
+
+        console.log(Object.entries(user));
+        
+
+
+
+    </script>
+</body>
+</html>
