@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Objects 1</h1>
+
+    <h3>More in Object 2</h3>
+    <h3>Objects can be singletone or object literals, this is all about object literals</h3>
+
+
+    <script>
+        
+        // how we declear an object
+
+        // to declear a symbol in the bellow object
+        const mySym = Symbol('key1');
+
+        // object literals
+        const myObj = {
+            name : "Pratap",      // behind the scene the 'keys' are track as a string, like here name is track as a string
+            'full name' : 'Pratap Karmakar',
+            age : 26,
+            mail : "pratap@google.com",
+            [mySym] : "myKey1",
+            isLoggedIn : false,
+            lastLoginDays : ['Monday', 'Saturday']
+        }
+
+        // to access the object
+        console.log(myObj.mail);
+
+        // this is how we should access the actual objects
+        console.log(myObj['mail']);    // as behind the scene the 'keys' are trackeed as string that's why we need to write the keys here as string
+
+        // as the full name key in the above object we can not access using dot '.' , so for that we need to access this like as follows
+        console.log(myObj['full name']);
+
+        // console.log(myObj.full name);  --> we can't do this
+
+        // to print the symbol we have to use array we can not access the value of the key mySym of the object using dot '.'
+        console.log(myObj[mySym]);
+
+        console.log(myObj);  // here we can see that the 'mySum' is a symbol
+        
+        
+        
+        // to change the values of the object
+        
+        console.log(myObj["mail"]);    // this will peint the old value 
+        
+        myObj.mail = 'pratapkarmakar@google.com';
+
+        console.log(myObj["mail"]);   // this will print the new vale
+
+
+
+        // if we want that no one can change the value. basically to freeze the value
+
+        // Object.freeze(myObj);        // this will make set the object freeze
+
+        myObj.age = 23;
+        console.log(myObj.age);   // it prints 26, so we can see the the values doesn't change
+
+
+
+        // greeting function, to run this function we need to comment out the Object.freeze(myOnj)  line otherwise it will not work **********************************************************
+
+        myObj.greeting = function(){
+            console.log("Hello js user");
+        }
+        console.log(myObj.greeting());
+
+        // now we are taking the refferance of name
+        myObj.greetingTwo = function(){
+            console.log(`Hello js user ${this.name}`);    // when we need to reffance the same object we use 'this'
+        }
+        console.log(myObj.greetingTwo());
+
+
+    </script>
+</body>
+</html>

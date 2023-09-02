@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array 2</h1>
+
+    <h4>More in array1</h4>
+
+
+    <script>
+        let marvel_heros = ['Thor', 'Ironman', 'Spiderman'];
+        
+        let dc_heros = ['Superman', 'Flash', 'Batman'];
+
+        // marvel_heros.push(dc_heros);   // this will insert the array in to an array, means it insert the dc_heros into the dc_heros, it doesn't return any new array 
+
+        // console.log(marvel_heros);
+        // console.log(marvel_heros[3][1]);
+
+
+
+        // using concat
+
+        // let allHeros = marvel_heros.concat(dc_heros);   // concat can merge two array and returns an single new array
+        // console.log(allHeros);
+
+        
+        
+        // using spread operator
+
+        let all_new_heros = [...marvel_heros, ...dc_heros];
+
+        console.log('spread operator : ',all_new_heros);
+
+
+
+        // unique situation
+
+        let another_array = [1, 2, 3, 4, [5,6,7], 8 , 9, [10,11, [12,13,14]]];
+
+        let solved_array = another_array.flat(Infinity);  // flat(infinity) will merger all the arryas into a single array, infinite means there can be infinite times of array merge them all
+
+        console.log('solved_array : ',solved_array);
+
+
+        // to chwck whether it is an array or the element is from any array
+        console.log(Array.isArray("Pratap"));  // this will print false
+
+        
+
+
+        // to convert a string in to an array
+        console.log(Array.from("Pratap"))    // it will convert 'Pratap' in to array with the letters of the string
+
+        console.log('creating array from pbject : ',Array.from({name : "Patap"}));
+
+        
+        
+
+        // converting some variables in to a single array
+        
+        let score1 = 100;
+        let score2 = 200;
+        let score3 = 300;
+        let name = "Pratap";
+        let anything = true;
+
+        console.log(Array.of(score1, score2, score3, name, anything))     // Array.of() returns a new array from a set of elements
+
+    </script>
+</body>
+</html>
