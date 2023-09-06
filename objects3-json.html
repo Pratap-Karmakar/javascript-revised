@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Objects 3 - JSON</h1>
+
+
+
+    <script>
+        const course = {
+            coursename : "JS in hindi",
+            courseprice : 999,
+            courseInstructor : "Hitesh"
+        }
+
+        console.log(course.courseInstructor);    // if we want to print courseInstructor then we need to call it like this, so if we want to print all the values of the object may times then we need to call it using the object name means every time we need to use 'course.and then the key name'
+
+
+        
+        // so for this reason we do object destructuring 
+
+        // object-destructring ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        const {coursename,courseprice,courseInstructor} = course;    // here we destructure all the keys from the object
+
+        console.log(coursename);   // it will print the coursename, here we don't need to use 'course.'
+        console.log(courseprice);  // it will print the courseprice
+
+
+        
+
+
+    </script>
+</body>
+</html>

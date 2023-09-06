@@ -7,13 +7,104 @@
 </head>
 <body>
     
-
+    <h1>Practice Page</h1>
 
     <script>
-        let str = 'anythig'
-        for (let i=0; i<=str.length; i++){
-            console.log(str[i]);
+        const mySym = Symbol("anything")
+        const myObj = {
+            name : "Pratap",      // behind the scene the 'keys' are track as a string, like here name is track as a string
+            'full name' : 'Pratap Karmakar',
+            age : 26,
+            [mySym] : Symbol("anything"),
+            mail : "pratap@google.com",
+            isLoggedIn : false,
+            lastLoginDays : ['Monday', 'Saturday']
         }
+
+        console.log(myObj["name"]);
+        console.log(myObj[mySym]);
+        console.log(typeof myObj[mySym]);
+
+        myObj.mail = "pratap@microsoft.com"
+
+        console.log(myObj["mail"]);
+
+        // Object.freeze(myObj);
+
+        // myObj.age=54;
+        // console.log(myObj.age);
+
+        myObj.greeting=function(){
+            console.log("Hi js user");
+        }
+        console.log(myObj.greeting());
+
+
+
+        myObj.greeting=function(){
+            console.log(`Hi js user ${this.name}`);
+        }
+        console.log(myObj.greeting());
+
+
+        const anything = new Object ();
+        console.log(anything);
+
+        const tinderUser = {};
+
+        tinderUser.id = "123abc";
+        tinderUser.name = "Pratap";
+        tinderUser.isLoggedIn = false;
+
+        const regularUser={
+            mail : "anything@gmail.com",
+            fullname : {
+                userfullname : {
+                    firstname : "Pratap",
+                    lasname : "Karmakar"
+                }
+            }
+        }
+
+        console.log(regularUser["fullname"]);
+        console.log(regularUser["fullname"]["userfullname"]);
+        console.log(regularUser["fullname"]["userfullname"]["firstname"]);
+
+        const obj1 = {a : 1, b : 2}
+        const obj2 = {c : 3, d : 4}
+        const obj3 = {e : 5, f : 6}
+
+
+        const newObj = {...obj1, ...obj2, ...obj3}
+        console.log(newObj);
+
+
+        const user = {
+            name : "Pratap",
+            id : 1,
+            isLoggedIn : false,
+            mail : "pratap@google.com"
+        }
+
+
+        console.log(Object.keys(user));
+        console.log(Object.values(user));
+
+
+
+
+
+
+        console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+        var fun = () =>{
+            for (var i = 0; i<=10; i++){
+                console.log(i);
+            }
+            console.log(i);
+        }
+        fun()
+;
     </script>
 </body>
 </html>

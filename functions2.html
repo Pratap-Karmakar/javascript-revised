@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Functions 2</h1>
+
+    <h2>More in Functions 1</h2>
+
+
+    <script>
+        
+        // to loop over a string and print it using function
+        const str = "Pratap";
+
+        const fun = () =>{
+            for (let i = 0; i<str.length; i++){
+                console.log(str[i])
+            }
+        }
+        fun();
+
+
+
+        function sum1 (num1,num2){
+            return (num1 + num2)
+        }
+
+        const result1 = sum1 (3,4);
+
+        console.log('Result 1 : ', result1);
+
+
+        function sum2 (num3,num4){
+            const result2 = (num3 + num4)
+
+            return result2
+        }
+
+        const result2 = sum2 (7,4);
+
+        console.log('Result 2 : ', result2);
+
+
+
+        function loginUserMessage (userName){
+            return (`${userName} is just logged in`);
+        }
+        console.log(loginUserMessage("Pratap"))
+
+
+
+        // if else function
+
+        function loginUser(username1){
+            if(!username1){
+                console.log("Please enter a user name");
+                return
+            }
+            else{
+                return (`${username1} just loggedin in loginUser`);
+            }
+        }
+        console.log(loginUser("Pratap Karmakar"));
+
+
+        // default value function
+
+        function loginUser(username1 = "User"){  // when we give a value here then it will act like the default value of the function
+
+                return (`${username1} just loggedin in loginUser`);
+        }
+        console.log(loginUser("Pratap Karmakar"));
+
+
+
+
+    </script>
+</body>
+</html>
