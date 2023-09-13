@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Functions 3</h1>
+
+    <h3>More in functions 1 and 2</h3>
+
+
+
+    <script>
+        function calculateCartPrice(...num1){ // these '...' three dots refers to 'spread/rest' operator, based on their usecase we decide that the used '...' three dots are 'spread operator' or 'rest operator', as here it is working as 'rest operator', means
+        // here we can see that we passed more than one parameters in a single operator, so using that 'rest operator' it will return all the parameterss of num1 in a single 'array'
+            return num1
+        }
+        console.log(calculateCartPrice(100,200,300,400));  // here we are passing more than one parameters in a single argument
+
+
+        // interview question
+
+        function anything(val1,val2,...num1){ // here we give val1 then val2 and then we used the rest operator
+            return num1;  // it will return the rest operator and print it and we can see that the array is created will 300, 400 and 500 because the first two values are passed in val1 and val2
+        }
+        console.log(anything(100,200,300,400,500)); 
+
+
+
+        // object in function
+
+        const user={
+            name : "Pratap",
+            age : 26
+        }
+
+        function handleObject(anything){  // here we can pass anythng as the parameter
+            return (`Username is ${anything.name} and the age is ${anything.age}`)
+        }
+        console.log(handleObject(user)); // in the function call we have to pass the actual object name as the argument
+
+
+
+
+        // passing the object directly
+
+        function handleObject2(anything2){  // here we can pass anythng as the parameter
+            console.log(`Username is ${anything2.username} and the age is ${anything2.userage}`)
+        }
+        handleObject2({    // we can pass the object directly here as argument as well
+            username : "Rana",
+            userage : 26        
+        });
+
+
+
+
+        // printing array element using the function
+
+        const newArray = [100,200,300,400];
+        
+        function returnArray(anything){  // we can pass anything as the parameter here but, we need to target the array using this parameter only which is 'anything'
+
+            return anything[1];  // here using the parameter 'anything' we are targeting the array and '[1]' means the 1th index of the array 
+        }
+        console.log(returnArray(newArray));   // here we need to pass the actual array name as the argument of the function
+
+
+
+
+        
+        function returnArray2(anything2){  // we can pass anything as the parameter here but, we need to target the array using this parameter only which is 'anything'
+
+            return anything2[2];  // here using the parameter 'anything' we are targeting the array and '[1]' means the 1th index of the array 
+        }
+        console.log(returnArray2([100,200,300,400]));   // here we need to pass the actual array name as the argument of the function
+
+
+
+        
+
+
+        // function sum(a,b){ // these are the parameters
+        //     return a+b;
+        // }
+        // console.log(sum(2,2));   // these are the arguments
+
+
+        
+
+        
+    </script>
+</body>
+</html>

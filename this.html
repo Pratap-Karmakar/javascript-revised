@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This method</h1>
+
+
+
+
+    <script>
+        const user = {
+            username : "Pratap",
+            subject : "JS",
+            welcomeMessage : function (){
+                console.log(`${this.username}, welcome to the website`);     // o reffer the current contex we use 'this' keyword as here this function is inside the object itself
+
+                console.log(this);   // it will print the current contex which is the user object
+            }
+        }
+
+        // as welcome message is a function so we need to call it
+        user.welcomeMessage();
+        
+        
+        user.username= "Sam"
+        user.welcomeMessage();
+
+
+        console.log(this);   // this will print the current contex which is the user object but with the changed username, as we changed the username
+
+
+        function abc(name){
+            username = name;
+            console.log('abc function',this.username);
+        }
+        abc("Pratap");
+
+
+
+
+        const sum = (a,b) =>{
+            return a+b;         // if we wrap with curly braces then we must need to write the reurn keyword
+        }
+        console.log(sum(3,3));
+
+        
+        
+        // arrow function with implicit return
+        const addTwo = (a,b) => a + b;
+        console.log(addTwo(3,4));
+
+
+
+        const addTheree = (a,b,c) => (a + b + c)    // if we wrap with parentheses then we don't neet to write return
+        console.log(addTheree(3,2,3));
+
+
+        
+        // return object with implicit return
+        const myObj = () => ({name : "Pratap", sub : "JS"})
+        console.log(myObj());
+
+
+
+        </script>
+</body>
+</html>

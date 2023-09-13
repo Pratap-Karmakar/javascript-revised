@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Scope</h1>
+
+
+
+    <script>
+
+
+        function one(){
+            const username = "Pratap";
+
+            function two(){
+                const website = "google";
+
+                console.log(username);     // we can access the 'username' from this function because this function is inside the parent function from where we are accessing the 'username'
+            }
+
+            // console.log(website);              // we can't access this outside the function scope that's why it is givving error and as js run line by line so for this error it never goes to the next line and the 'two()' function never called
+
+            two();   // this function is executed becaues it it inside the parent function and this 'two()' function is inside the parent function, and we can not call this function from the outside of the parent function we have to call this function from inside this parent function
+
+        }
+
+        one();
+
+
+
+        if(true){
+            const username = "Pratap";
+            if(username === "Pratap"){
+                const website = "Google";
+
+                console.log(username + website);
+            }
+
+            // console.log(website);          // we can't access the website from outside the if scope, and as we know js gfoes line by line and as we are getting error in this line so it neve go to the next line although we can access the username from here  
+
+            console.log(username);   // it will print the username here but it will not as we are getting error in the above line
+        }
+
+        // console.log(username);      // we can't access the username from outsidet the if scope
+
+
+        
+        
+        
+        // ++++++++++++++++++++++++++++++++  Interesting  ++++++++++++++++++++++++++++++++++++
+
+        // normal function
+
+        console.log(addOne(5));    // as it is a normal function so we can call the function even the function is created (*obviously we have the function)
+
+        function addOne(num){
+            return num + 1
+        }
+
+
+
+
+
+        // function expression or function declaration in a variable
+
+        console.log(addTwo(5));    // here we can not call the function before the function declaration because og hoisting
+
+        const addTwo = function(number){
+            return number + 2
+        }
+
+
+
+
+    </script>
+</body>
+</html>
