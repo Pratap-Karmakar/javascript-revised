@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Truthy and Falsy</h1>
+
+
+    <script>
+        const mail = -1
+
+        if(mail){
+            console.log('got the mail');
+        }
+        else{
+            console.log("don't have mail");
+        }
+
+
+        // ++++++++++++++++++++++ Falsy values ++++++++++++++++++++++
+
+        // false, 0, -0, BigInt 0n, "", null, undefine, NaN
+
+        // ++++++++++++++++++++++ Truthy values ++++++++++++++++++++++ 
+
+        // '0', 'false', " "    -> anything inside quotes, [] & {} -> empty array and object, function(){} -> empty function, -1 or anything  -> any number with '-' negative numbers
+        
+        
+
+
+        const myArr = []  // empty array
+        
+        // to check the empty array
+
+        if (myArr.length === 0) {
+            console.log('no value in the array');
+        }
+        else {
+            console.log('value available in the array');
+        }
+
+
+
+
+
+        // to check the empty object   ***********************************************
+
+        const myObj = {}
+
+        if (Object.keys(myObj).length === 0) {    // when we want to check the keys of the object we use Object.keys() and pass whatever the object is, then it returns an array with all the key names present in the object and then we can check the length of the array
+            console.log('empty object');
+        }
+        else{
+            console.log('object is not empty');
+        }
+
+
+
+
+        // check in the console
+
+        false == 0;      // it is true
+
+        false == ''      // it is true
+
+         '' == 0         // it is true
+ 
+
+</script>
+</body>
+</html>

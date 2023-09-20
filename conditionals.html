@@ -34,16 +34,52 @@
         console.log('text' / 5);   //will give NAN
 
 
+
+        // Terniary operator
+
+
+        const result1= 0 ? 'true' : 'false'
+        console.log('result1 -> ',result1);
+        
+        const result2= 1 ? 'true' : 'false'
+        console.log('result2 -> ',result2);
+        
+
+
+
+
+        // Nullish Coalescing Operator (??) -> null, undefine
+
+
+        // if there is having vvalue at the first position then it will take the first values otherwise it will go the second value. we can put complex functions there as well 
+
+        let val1 = 5 ?? 10  
+        console.log(val1);   // it print 5 because in the first option it is having a value 5
+
+        let val2 = null ?? 20
+        console.log(val2);   // it prints 20 because in the first position it is having null
+
+        let val3 = undefined ?? 30 
+        console.log(val3);   // it prints 30 because in the first position it is having undefine
+
+        let val4 = null ?? 40 ?? 50   
+        console.log(val4);   // it prints 40 becausse at the first position it is having null and at the second position it is having 40 as a value so for this the condition is not going to the next value 
+
+
+
+
+        const price = 100;
+        
+        price >= 70 ? console.log("price is more than 70") : console.log('price is less than 70');;
+
+        
+
+
+
+
         let anything;
         console.log(anything);  // will give undefined
         console.log(something);  // this will pring 'Uncaught ReferenceError: k is not defined' int the console 
-
-
-
-        const result= 0 ? 'true' : 'false'
-        console.log(result);
-
-
     </script>
 </body>
 </html>

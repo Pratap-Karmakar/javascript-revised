@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Immediately Invoked Function Expression (IIFE)  -> Which functions are executed immediately</h1>
+
+    <h1>WE MUST ADD ; AT THE END</h1>
+
+    <h2>Sometimes we face some errors from the pollutions from the global scope, so to get rid of that we use iffe</h2>
+
+
+    <script>
+
+
+        // this is a 'named iffe', because this function is having a name
+        (function some(){
+            console.log('anything');
+        })();
+
+
+
+        // this is a 'normal iffe', because this function is not having a name
+        (()=>{
+            console.log('arrow function')
+        })();
+
+
+        ((name)=>{console.log(`the name is ${name}`);})("Pratap")
+
+    </script>
+</body>
+</html>
