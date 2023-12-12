@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Loops for Arrays</h1>
+    <h2>forOf(), forIn(), ForEach()</h2>
+
+
+
+
+
+    <script>
+
+
+        const arr = [1, 2, 3, 4, 5]
+
+        for (const anything of arr) {     // here we can name it anything and then we will write 'of' then the array name
+            console.log(anything);     // here we need to preint the variable name what we've gave
+        }
+
+
+        const myArr = ['ironman', 'thor', 'spiderman', 'deadpool']
+
+        for (const arr of myArr) {
+            console.log(arr);
+        }
+
+
+
+        const message = 'Hello World!'
+        
+        for(const anything of message){
+            console.log(anything);
+        }
+
+
+
+
+        const messageNew = 'Iron Man'
+
+        for(const anything of messageNew){
+            if(anything === ' '){
+                console.log('Space detected');
+                break
+                // continue
+            }
+            console.log(anything);
+        }
+
+
+
+
+        // Maps 
+
+        const map = new Map();
+
+        map.set('IN', 'India')
+        map.set('USA', 'United State of America')
+        map.set('Fr', 'France')
+        map.set('IN', 'India')   // it will not re-enter in the object because of 'map' because it is already exist, 
+
+
+        console.log('Map : ',map);
+
+        for(const [mapKey, mapValue] of map){    // this is the syntax of objecet destructuring in 'for-of'  for 'map'
+            console.log(`Key : ${mapKey} , Value : ${mapValue}`);
+        }
+
+
+
+
+
+
+        // we can't use 'for-of' loop in objects  for loop over objects we have 'for-in' loop
+
+        const myObj = {
+            name:"Pratap",
+            surname:"Karmakar",
+            age:26
+        }
+
+        // for(const [myObjKey, myObjValue] of myObj){              // we can't use 'for-of' loop in objects, becaues it is not iterable
+        //     console.log(`key : ${myObjKey} , value : ${myObjValue}`);
+        // }
+
+
+
+
+        // frr-in loop
+
+        const newObj = {
+            name:"Tom",
+            surname:"Holland",
+            age:24
+        }
+
+        // using this syntax we can only print the key of the object
+        for (const something in newObj){
+            console.log('something :', something);
+        }
+
+        // to print the values of the object using 'for-in' loop
+        for(const anything in newObj){
+            console.log(`the valeus ${newObj[anything]}`);
+        }
+
+        // to print the key and values together
+        for(const anything1 in newObj){
+            console.log(`the key : ${anything1} , the valeus : ${newObj[anything1]}`);
+        }
+
+
+
+
+        // for-in loop in array
+
+        const newArr = ['Ironman', 'Spiderman', 'Thor', 'Deadpool',];
+
+        for(const arrayTry in newArr){
+            console.log('arrayTry',arrayTry);    // this will print the index values of the array elements
+        }
+
+
+        for(const arrayTry1 in newArr){
+            console.log('for-ion loop in array : ', newArr[arrayTry1]);
+        }
+
+
+
+
+        console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> forEach()");
+
+        // forEach function on Array
+
+        const coding = ['JS', 'HTML', 'CSS', 'React', 'Tailwind'];
+
+        coding.forEach((anything)=>{
+            console.log(anything);
+        })
+
+
+        console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> forEach with a function");
+        // we can use a function and inside that function we can pass the parameter and then we can use the forEach function and in the forEach function we don't need to create a callback function we can simply give the reference of that created function
+
+        const coding2 = ['HTML', 'CSS', 'JS', 'React.js'];
+
+        const printForEach = (anything) =>{    // here 'anything' is the paramereter we have passed which is also the parameter of the  
+            console.log(anything);
+        }
+
+        coding2.forEach(printForEach);   // here in the forEach method we just need to give the function's reference we don't have to call the function here
+
+
+
+
+
+        console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> forEach other paramereter");
+
+        const anArray = ['js', 'html', 'css', 'React', 'Next', 'Tailwind']
+
+        // anArray.forEach((item, index, array)=>{
+        anArray.forEach((first, second, third)=>{   // here the 'first' parameter is for the item of the array, the 'second' parameter is for the index of the item in the array, the 'third' is for the total array
+            console.log(first, second, third);    // first -> item, second -> index, third -> total array
+        })
+
+        
+        
+
+
+        
+        console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> forEach with objecet inside array");
+
+        const anyArray = [
+            {
+                languageName : 'JavaScript',
+                shortcut : 'js'
+            },
+            {
+                languageName : 'C Plus Plus',
+                shortcut : 'c++'
+            },
+            {
+                languageName : 'Python',
+                shortcut : 'py'
+            },
+        ]
+
+
+        anyArray.forEach((anything)=>{
+            console.log(anything.languageName);
+        })
+
+
+
+
+
+        console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> forEach return value or not ?");
+
+        const Array2 = ['js', 'html', 'css', 'React', 'Next', 'Tailwind']
+
+        const value = Array2.forEach((item)=>{
+            return item;
+        })
+        console.log(value);    // it will print 'undefined' because forEach does not return any value
+
+    </script>
+</body>
+</html>
+
+
+
+
+

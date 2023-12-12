@@ -9,6 +9,8 @@
     
     <h1>Practice Page</h1>
 
+
+
     <script>
         const mySym = Symbol("anything")
         const myObj = {
@@ -220,6 +222,549 @@
 
 
 
+        let arr44 = [2,3,4,5,6,78,9]
+
+        for (const anything of arr44) {
+            console.log('for-of',anything);
+        }
+
+        let obj44 = {
+            name : "Pratap",
+            age : 26,
+            subject : "web dev"
+        }
+        for (const key in obj44) {
+            console.log(`for-in loop -->  key : ${key}   and   value : ${obj44[key]}`);
+        }
+
+
+        // for (const [key,value] of obj44) {       // objects are not itrateable
+        //     console.log(`key -> ${key}  and  values-> ${value}`);
+        // }
+
+
+        // array.forEach(element => {
+            
+        // });
+
+
+        const country = new Map();
+
+        country.set('IN', "India")
+        country.set('IN', "India")
+        country.set('SP', "Spain")
+        country.set('US', "United State")
+        
+
+        console.log(country);
+
+
+        for (const [key , value] of country) {
+           console.log(`country code --> ${key}  and  country --> ${value}`);
+        }
+
+
+
+        const myObject = {
+            js : "Java Script",
+            cpp : "C++",
+            r : "React",
+            n : "Next.js"
+        }
+
+
+        for (const key in myObject) {
+            console.log(`shortcut --> ${key}  for --> ${myObject[key]}`);
+        }
+
+
+        let anArray = ['js','react.js','next.js','html','css',1,2,3,4];
+
+        for (const key in anArray) {
+            console.log(`printing an array using for-in loop  ${key}`);
+        }
+
+
+
+
+        console.log("??????????????????????????????????????");
+        
+        
+        const ant = new Map();
+
+        ant.set("g","g");
+        ant.set("f","f");
+        ant.set("d","d");
+        ant.set("g","g");
+        
+        for (const [key,value] of ant) {
+            console.log(key,value);
+        }
+        
+        console.log("??????????????????????????????????????");
+        const ggg = {
+            ff : "gan",
+            jf : "gna",
+            ll : "lkj",
+            kl : "kjh"
+        }
+        
+        for (const val in ggg) {
+            console.log(val, ggg[val]);
+        }
+        
+        
+        console.log("??????????????????????????????????????");
+        const lll = "Kasss Nbss";
+        
+        for (const val of lll) {
+            console.log(val);
+        }
+        
+        
+        console.log("________________________________");
+        const arrrrr = [2,3,4,5,6,78,9]
+
+        for (const val of arrrrr) {
+            console.log(val);
+        }
+
+        for (const key in arrrrr) {
+            console.log(key);
+        }
+        for (const key in arrrrr) {
+            console.log(arrrrr[key]);
+        }
+
+
+
+
+
+        console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> forEach");
+        const hjhj = [2,3,4,5,6,7,8,9]
+
+        hjhj.forEach(anything => {
+            console.log(anything);
+        });
+
+
+        console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>    conversion operations');
+
+        let num = '66yy';
+        console.log(typeof num);
+
+        let num2 = Number(num);
+        console.log(typeof num2);
+
+        console.log('num - ',num);
+        console.log('num2',num2);
+
+
+        let num3 = 22;
+        let num4 = String(num3);
+
+        console.log('num4 - ',typeof num4);
+
+
+
+        console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>');
+        let myName = 'Rana';
+        let secondName = myName;
+
+        secondName = 'Pratap'
+
+        console.log('myName',myName);
+        console.log('secondName',secondName);
+
+
+        console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>');
+    
+
+        let firstObject = {
+            name : "Rana",
+            age : 27
+        }
+
+        let secondObject = firstObject;
+
+        secondObject.name="Pratap";
+
+        console.log('firstObject', firstObject);
+        console.log('secondObject', secondObject);
+
+
+
+        console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> string");
+
+        let aNewString = "anything";
+
+        let aNewString2 = aNewString.substring(0,3);
+
+        console.log('aNewString',aNewString);
+        console.log('aNewString2',aNewString2);
+
+        let aNewString3 = aNewString.slice(0,3)
+
+        console.log('aNewString3',aNewString3);
+
+
+
+        let anyString1 = "        Pratap         ";
+        console.log('anyString1', anyString1.trim());
+        console.log('anyString1', anyString1.trimStart());
+        console.log('anyString1', anyString1.trimEnd());
+
+
+        let url = "anythinganything%20anything"
+        console.log(url.replace('%20',' '));
+
+
+
+        let aurlString = "anything-anything-anything"
+
+        console.log(aurlString.split('-'));
+
+
+
+
+        console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> trim()");
+
+        let bname = '            bbb           ';
+        console.log(bname.trimEnd());
+        console.log(bname);
+
+
+        let stringslice = 'anything';
+
+        console.log(stringslice.slice(0,4));
+        console.log(stringslice.slice(-7,4));
+
+
+
+        console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>number");
+
+        let aScore = 600;
+
+        console.log("toFixed in a number",aScore.toFixed(2));
+
+              
+        console.log("Math.abs", Math.abs(-4));        
+
+        console.log("Math.celi", Math.ceil(10.9));  
+        console.log("Math.celi", Math.ceil(10.1));
+
+        console.log("Math.round", Math.round(10.9));  
+        console.log("Math.round", Math.round(10.5));  
+        console.log("Math.round", Math.round(10.4));
+        
+        
+        console.log("Math.floor", Math.floor(10.9876));
+        // console.log("Math.floor", Math.());
+
+
+
+
+        console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> array");
+
+
+        let antArray = [1,2,3,4,5,6,7,8,9,10,5,4,3,2,1];
+
+        console.log(antArray);
+        
+        // antArray.unshift(-4);
+        
+        // antArray.push(4);
+
+
+        // antArray.pop(1);
+
+        // antArray.shift();
+
+
+        let antttt =  antArray.join()
+
+        console.log(antttt);
+
+        console.log(typeof antttt);
+
+
+
+        // console.log(antArray.indexOf(3));
+
+        // console.log(antArray.lastIndexOf(5));
+
+
+        console.log(">>>>>>>>>>>>>>>>>>>>>>>> slice & aplice");
+
+        let aNrwArray1 = [0,1,2,3,4,5];
+
+        console.log("main array", aNrwArray1);
+        
+
+        console.log("slice", aNrwArray1.slice(1,3))
+        console.log("main array", aNrwArray1);
+        
+        
+        console.log("splice", aNrwArray1.splice(1,3));
+        console.log("main array", aNrwArray1);
+
+
+
+
+        console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> array-2");
+
+        let marvel = ["Thor", "Captain America", "Iron Man", "Spiderman"];
+
+        let dc = ["Superman", "Batman", "Wolverin"];
+
+
+        // marvel.push(dc);
+        // console.log(marvel);
+
+        // let heros = new Array (marvel.push(dc));
+        
+        // console.log("heros", heros);
+        // console.log(typeof heros);
+        // console.log(typeof marvel);
+        // console.log(marvel[4][1]);
+
+        let heros = marvel.concat(dc);
+        console.log(heros);
+
+
+        let mdheros = [...marvel, ...dc];
+        console.log("spread operator",mdheros);
+
+
+        let another_array = [1, 2, 3, 4, [5,6,7], 8 , 9, [10,11, [12,13,14]]];
+
+        let someArray = another_array.flat(Infinity)
+
+        console.log('someArray', someArray);
+
+
+
+        let anyName = "Pratap";
+        let nameArray = Array.from(anyName);
+
+        console.log('nameArray',nameArray);
+
+
+        let a = 88;
+        let b = 66;
+        let c = 99;
+        let d = 'pratap';
+        let e = 55;
+
+        let ofArray = Array.of(a,b,c,d,e);
+        console.log(ofArray);
+        
+
+
+        console.log(">>>>>>>>>>>>>>>>>>>>>>>>>> object");
+
+
+        const mySymbol = Symbol('anything');
+
+        let newObject = {
+            name : "Pratap",
+            age : 26,
+            [mySymbol] : 'something',
+            title : "Karmakar",
+            job : "Web Development",
+            anything : 'something'
+        }
+
+        console.log(newObject['name']);
+
+        newObject.anything = "something new";
+        console.log(newObject['anything']);
+
+        // Object.freeze(newObject);
+
+        // newObject.name = "Rana Pratap"
+
+        console.log(newObject['name']);
+
+        console.log(newObject[mySymbol]);
+
+        console.log(newObject);  // to check whether [mySymbol] is a symbol or not
+        
+        
+        
+        newObject.kk = 'jj';
+        console.log(newObject['kk']);  
+
+        newObject.greeting = function(){
+            console.log('hello js user');
+        }
+
+
+        console.log(newObject.greeting());
+
+        newObject.greeting2 = function(){
+            console.log(`hello js user ${this.name}` );
+        }
+
+        console.log(newObject.greeting2());
+
+
+        console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> object 2');
+
+        let someObject = {}
+
+        someObject.name = "Pratap";
+        someObject.age = 26;
+        someObject.job = 'Web Development';
+
+        console.log(someObject);
+
+
+        let someObject2 = {
+            name : "Pratap",
+            fullname : {
+                firstname : "Pratap",
+                Lastname : "Karmakar",
+                job : {
+                    type : "Full Time", 
+                    role : "Web Developer"
+                }
+            }
+        }
+
+        console.log(someObject2['fullname']['job']['role']);
+
+
+        let object1 = {
+            a : 1,
+            b : 2,
+            c : 3,
+        }
+
+        let object2 = {
+            ddd : 4,
+            eee : 5,
+            fff : 6,
+        }
+
+        let object3 = {
+            g : 7,
+            h : 8,
+            i : 9,
+        }
+
+        let mergedObject = {...object1, ...object2, ...object3}
+
+        console.log(mergedObject);
+
+
+        const {ddd,eee,fff} = object2
+
+        console.log(eee);
+
+
+        console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> function');
+
+        // let aFun = () =>{
+        //     for(var i=1; i<=10; i++){
+            //    for(let i=1; i<=10; i++){
+        //         console.log(i);
+        //     }
+        //     console.log(i);
+        // }
+        // aFun();
+
+
+
+        let abcd = () =>{
+            var ajjj = 10;
+            console.log("this is the first simple ajjj accessing at the top", ajjj);
+            let efgh = () =>{
+                var bkkk = 20;
+                console.log('this is the simple bkkk accessing', bkkk);
+                console.log('here we are accessing ajjj from inside the efgh function', ajjj);
+            }
+            efgh();
+
+            // console.log('here we are accessing bkkk from the outside of the efgh function', bkkk);
+        }
+        abcd();
+
+        // console.log('here at the outside of both the functions we are accessing ajjj', ajjj);
+        // console.log('here at the outside of both the functions we are accessing bkkk', bkkk);
+
+
+
+        let someName = "Pratap";
+
+        for(let i=0; i<someName.length; i++){
+            console.log('printing the name',someName[i]);
+        }
+
+
+
+
+
+        console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> printing the name");
+
+        let str = "Pratap";
+
+        const aFunc = () =>{
+            for(i=0; i<str.length; i++){
+                console.log(str[i]);
+            }
+        }
+        aFunc();
+        
+
+        console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>> function2");
+
+        const sum =(a,b)=>{
+            return(a+b);
+        }
+        console.log(sum(2,3));
+
+
+        const someUsername=(name)=>{
+            if(!name){
+                console.log("no user-name found");
+            }
+            else{
+                console.log(`user-name is ${name}`);
+            }
+        }
+        someUsername("Pratap");
+
+
+        const aUsername = (username = 'user')=>{
+            if(!username){
+                console.log(`the default username is ${username}`);
+            }
+            else{
+                console.log(`the entered username is ${username}`);
+            }
+        }
+        aUsername();
+
+
+        const anyUsername=(username = "user-name")=>{
+            console.log(`the default username is ${username}`);
+        }
+        anyUsername()
+
+
+
+        console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> function3");
+
+        const someNew = (...user) =>{
+            return user
+        }
+        console.log(someNew(1,2,3,4,5));
+
+        const someNew2 = (a,b,c, ...num)=>{
+            return a,b,c,num;
+        }
+        console.log(someNew2(1,2,3,4,5,6,7,8,9));
 
 
     </script>

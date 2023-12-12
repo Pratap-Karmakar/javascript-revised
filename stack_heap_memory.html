@@ -25,9 +25,9 @@
 
         // let's change the value of anotherName
         anotherName = 'facebook'  
-        console.log('anotherName : ',anotherName);    // now it will print facebook as the value of anotherName is changed
+        console.log('anotherName : ',anotherName);    // now it will print facebook as the value of anotherName is changed because we are having a copy of the name variable in the anotherName variable
 
-        console.log('name : ',name)  // here it will print youtube, because it's value is remain the same
+        console.log('name : ',name)  // here it will print youtube, because it's value is remain the same because the we changed the value of anotherName and anotherName is having a copy as the value of the name variable. 
 
 
 
@@ -47,7 +47,7 @@
 
         userTwo.email = 'pratap@google.com'
 
-        console.log('userTwo : ',userTwo);   // it's values are changed as we change it values
+        console.log('userTwo : ',userTwo);   // here the values are changed as we change the values
 
         console.log('userOne : ',userOne);  // here we can see the userOne's values are also changed because we are haveing the reference of the values of userOne in userTwo, so actually we made the changes in the original value
 

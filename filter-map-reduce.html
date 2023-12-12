@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Filter, Map, Reduce</h1>
+
+    <h3>All there function -> filter(), map(), reduce()  does return values where forIn, forOf, forEach does not return any values</h3>
+
+
+
+    <script>
+
+        const myNum = [1,2,3,4,5,6,7,8,9,10]
+
+        const newNums = myNum.filter((anything)=> (anything > 4))  // this will actually return all the numbers which are bigger than 4
+        // this is implicit return for more watch the 'This' video from chai aur code
+        console.log(newNums);
+
+        const lessThanSeven = myNum.filter((anything)=>{
+            return anything < 7
+        })
+
+        console.log(lessThanSeven);
+
+
+
+        console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> the above work we can do using forEach method');
+        // the above work we can do using forEach method
+
+        const emptyArray = [];
+
+        myNum.forEach((item)=>{
+            if(item<7){
+                emptyArray.push(item)
+            }          
+        })
+        console.log(emptyArray);
+
+
+
+
+
+
+    </script>
+</body>
+</html>
