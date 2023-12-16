@@ -767,6 +767,119 @@
         console.log(someNew2(1,2,3,4,5,6,7,8,9));
 
 
+        console.log(">>>>>>>>>>>>>>>>>>>>>> object using function");
+
+        const someNew3 = {
+            name : "Pratap",
+            age : 26,
+        }
+
+        const someNew4 = (user) =>{
+            console.log(`the name is ${user.name} and the age is ${user.age}`);
+        }
+        someNew4(someNew3);
+
+
+
+        const someNew5=(user)=>{
+            console.log(`the name is ${user.name} and the age is ${user.job}`);
+        }
+        someNew5(net={
+            name : "Rana",
+            job : "Web Developer"
+        })
+
+
+
+        console.log('>>>>>>>>>>>>>>>>>>>>>> array using function');
+
+        const someNewArray = [1,2,3,4,5];
+
+        const someNewFunction = (num) =>{
+            console.log(`the array values are ${num[1]}`);
+        }
+        someNewFunction(someNewArray);
+
+
+        const someNewFunction2 = (num) =>{
+            console.log(`the values of the array ${num[3]}`);
+        }
+
+        someNewFunction2(hhj=[1,2,3,4,5,6]);
+
+
+
+
+        console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Scopes");
+
+        const someFunction = () =>{
+            let someUSer = "Pratap";
+            const someFunction2 = () =>{
+                let someUSer2 = "Rana";
+                console.log("accessting the outer function's value from the inside function -- someUSer ok", someUSer);
+                console.log("accessing the inner function's value from inside the function -- someUSer2 ok", someUSer2);
+            }
+            someFunction2();
+            // console.log("accessing the inner function's value from inside the oouter function -- someUSer2 no", someUSer2);
+        }
+        someFunction();
+        // console.log("accessting the outer function's value from the very outside of both the functions -- someUSer no", someUSer);
+        // console.log("accessting the outer function's value from the very outside of both the functions -- someUSer2 no", someUSer2);
+
+
+
+        console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> scope2");
+
+       const yooFunc=()=>{
+        const name = "Pratap";
+        if(name === "Pratap"){
+            const website = "Google";
+            console.log(name + website);
+        }
+       }
+       yooFunc();
+
+
+
+
+    //    console.log(yooFunc2(2,3));
+    //    const yooFunc2=(a,b)=>{
+    //        return a+b
+    //     }
+
+
+    console.log(yooFunc3(2,3));
+
+    function yooFunc3(t,k){
+        return t+k;
+    }
+
+
+
+    console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>> This");
+
+    const thisObject = {
+        name : "Pratap",
+        job : "Web Developer",
+        func : function(){
+            console.log(`the name is ${this.name} and he is doing job as a ${this.job}`);
+        }
+    }
+
+    thisObject.func();
+
+
+    thisObject.name = "Pratap Karmakar";
+    thisObject.func()
+
+
+    console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> IIFE");
+
+    ((a,b)=>console.log(a+b))(5,6);
+
+    ((name)=>console.log(`the name is ${name}`))("sam") ;
+
+    ((age)=>{console.log(`the age is ${age}`);})(27);
     </script>
 </body>
 </html>
