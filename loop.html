@@ -1,134 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
+  </head>
+  <body>
     <h1>Loop</h1>
 
     <script>
+      // for loop
 
-        // for loop
+      // for(let i=0; i<=9; i+2){
+      //     console.log(i)
+      // }
 
-        // for(let i=0; i<=9; i+2){
-        //     console.log(i)
-        // }
-    
+      // while loop
+      let a = 11;
 
-        // while loop
-        let a = 11;
+      while (a < 20) {
+        a++;
+        console.log(a);
+      }
 
-        while (a<20){
-            a++
-            console.log(a);
+      // if else inside a for loop
+
+      // for (let i=0; i<=5; i++){
+      //     let element = i;
+      //     if(element == 4){
+      //         console.log("4 is a good number");   // it will print aafter 6 then print the 7 number
+      // }
+      //     console.log(i);
+      // }
+
+      // loop inside loop
+      // printing table using for loop from 0 to 10
+
+      // for(let i=0; i<=10; i++){
+      //     console.log(`outer loop ${i}`);
+      //     for(let j=0; j<=10; j++){
+      //         // console.log(`inner loop ${j} and outer loop ${i}`);
+      //         console.log(`${i} * ${j} = ${i * j}`);
+      //     }
+      // }
+
+      const myArr = ["ironman", "thor", "spiderman", "deadpool"];
+
+      for (i = 0; i < myArr.length; i++) {
+        console.log(myArr[i]);
+      }
+
+      // break and continue
+
+      // for (let i = 1; i < 20; i++) {
+
+      //     if(i == 5){
+      //         console.log('Detected 5');
+      //         break         // break means the loop will stop when the condition match
+      //     }
+
+      //     console.log(`Value of i is : ${i}`);
+
+      // }
+
+      for (let i = 1; i < 20; i++) {
+        if (i == 5) {
+          console.log("Detected 5");
+          continue; // it meand whenever it detectes the number it prints the log but doesn't print the number
         }
 
+        console.log(`Value of i is : ${i}`);
+      }
 
-        // if else inside a for loop
+      let alpha = 0;
+      while (alpha <= 10) {
+        alpha = alpha + 2;
+        console.log("alpha : ", alpha);
+      }
 
-        // for (let i=0; i<=5; i++){
-        //     let element = i;
-        //     if(element == 4){
-        //         console.log("4 is a good number");   // it will print aafter 6 then print the 7 number
-        //     }
-        //     console.log(i);
-        // }
+      // 1 to 10 using while loop
 
+      console.log("1 to 10 using while loop");
+      let h = 0;
 
-
-        // loop inside loop
-        // printing table using for loop from 0 to 10
-
-        // for(let i=0; i<=10; i++){
-        //     console.log(`outer loop ${i}`);
-        //     for(let j=0; j<=10; j++){
-        //         // console.log(`inner loop ${j} and outer loop ${i}`);
-        //         console.log(`${i} * ${j} = ${i * j}`);
-        //     }
-        // }
+      while (h <= 10) {
+        h++;
+        console.log("", h);
+      }
 
 
 
+    //   if we want to print the array this way then this will print all the array elements except the 1st element which is the 0th element, because here we are increament the value ath the first
 
-        const myArr = ['ironman', 'thor', 'spiderman', 'deadpool']
+      let ekArray = ["thor", "spiderman", "ironman", "loki"];
 
-        for(i=0; i<myArr.length; i++){
+      let iArray = 0;
 
-            console.log(myArr[i]);
-        }
-
-
-        // break and continue
-
-        // for (let i = 1; i < 20; i++) {
-            
-        //     if(i == 5){
-        //         console.log('Detected 5');
-        //         break         // break means the loop will stop when the condition match
-        //     }
-
-        //     console.log(`Value of i is : ${i}`);
-
-        // }
+      while (iArray < ekArray.length) {
+        iArray++;
+        console.log(ekArray[iArray]);
+      }
 
 
 
+    //   using this way we can print the full array because here we are increament the value at the end that's why it will print the 1st value which is at the 0th position in the array.
 
+      let myArrNew = ["Ironman", "Thor", "Spiderman", "Dr. Strange"];
 
-        for (let i = 1; i < 20; i++) {
-            
-            if(i == 5){
-                console.log('Detected 5');
-                continue        // it meand whenever it detectes the number it prints the log but doesn't print the number
-            }
+      let arr = 0; // this is the first initilization of the value, like we write in the for loop for(let i=0)
 
-            console.log(`Value of i is : ${i}`);
+      while (arr < myArrNew.length) {
+        arr++;
+        console.log(myArrNew[arr]);
+      }
 
-        }
+      // do-while loop
 
-
-
-        let alpha = 0;
-        while(alpha <= 10){
-            alpha= alpha+2;
-            console.log('alpha : ',alpha);
-        }
-
-
-        // 1 to 10 using while loop
-
-        console.log('1 to 10 using while loop');
-        let h=0;
-
-        while ( h<=10) {
-            
-            h++;
-            console.log('',h);
-        }
-
-
-        let myArrNew = ['Ironman', 'Thor', 'Spiderman', 'Dr. Strange'];
-        
-        let arr = 0;    // this is the first initilization of the value, like we write in the for loop for(let i=0)
-
-        while (arr < myArrNew.length) {
-            arr++;
-            console.log(myArrNew[arr]);
-        }
-
-
-        // do-while loop
-
-        let score = 11;
-        do {
-            console.log(`the score is ${score}`);
-            score++;             // it will increase the value until the while condition stisfied
-        } while (score<=10);   // after this condition satisfied the increment of the score in the do loop will stop
-
-        
+      let score = 11;
+      do {
+        console.log(`the score is ${score}`);
+        score++; // it will increase the value until the while condition stisfied
+      } while (score <= 10); // after this condition satisfied the increment of the score in the do loop will stop
     </script>
-</body>
+  </body>
 </html>

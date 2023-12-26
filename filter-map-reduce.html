@@ -14,6 +14,9 @@
 
     <script>
 
+
+        console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> filter()");
+
         const myNum = [1,2,3,4,5,6,7,8,9,10]
 
         const newNums = myNum.filter((anything)=> (anything > 4))  // this will actually return all the numbers which are bigger than 4
@@ -43,6 +46,206 @@
 
 
 
+        console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> filter()");
+
+        const books = [
+        {
+            title : 'Book One',
+            genre : 'Computer Science',
+            publish : 1991,
+            edition : 2019
+        },
+        {
+            title : 'Book Two',
+            genre : 'Web Development',
+            publish : 1995,
+            edition : 2023
+        },
+        {
+            title : 'Book Three',
+            genre : 'HTML',
+            publish : 1990,
+            edition : 2023
+        },
+        {
+            title : 'Book Four',
+            genre : "CSS",
+            publish : 1990,
+            edition : 2023
+        },
+        {
+            title : 'Book Five',
+            genre : 'JavaScript',
+            publish : 1898,
+            edition : 2024
+        },
+        {
+            title : 'Book Six',
+            genre : 'React.js',
+            publish : 2011,
+            edition : 2024
+        },
+        {
+            title : 'Book Seven',
+            genre : 'Next.js',
+            publish : 2019,
+            edition : 2024
+        },
+        {
+            title : 'Book Eight',
+            genre : 'Next.js',
+            publish : 2020,
+            edition : 2023
+        },
+        {
+            title : 'Book Nine',
+            genre : 'Next.js',
+            publish : 2006,
+            edition : 2022
+        },
+        {
+            title : 'Book Ten',
+            genre : 'JavaScript',
+            publish : 2000,
+            edition : 2024
+        },
+        {
+            title : 'Book Eleven',
+            genre : 'JavaScript',
+            publish : 2008,
+            edition : 2024
+        },
+        {
+            title : 'Book Twelve',
+            genre : 'JavaScript',
+            publish : 2000,
+            edition : 2024
+        },
+        {
+            title : 'Book Thirteen',
+            genre : 'JavaScript',
+            publish : 1999,
+            edition : 2022
+        },
+        {
+            title : 'Book Fourteen',
+            genre : 'Web Development',
+            publish : 1998,
+            edition : 2022
+        },
+        {
+            title : 'Book Fifteen',
+            genre : 'Web Development',
+            publish : 1998,
+            edition : 2023
+        }
+    ]
+
+     
+    let bookFilter = books.filter((books)=>{
+        return (books.genre === 'JavaScript')
+    })
+    console.log('bookFilter',bookFilter);
+
+    let bookFilter2 = books.filter((books)=>{
+        if(books.genre === 'Web Development'){
+            console.log('bookFilter2',books);
+        }
+    })
+
+    let bookFilter3 = books.filter((books)=>{
+        if(books.genre === 'Next.js'){
+            console.log('bookFilter3',books.title);
+        }
+    })
+
+
+    books.forEach((anything) => {
+        if(anything.genre === 'JavaScript'){
+            console.log('using forEach',anything);
+        }
+    });
+
+    let bookFilter4 = books.filter((books)=>{
+        return(books.publish > 2000 && books.genre === 'Next.js')
+    })
+    console.log('publish > 2000',bookFilter4);
+
+
+
+
+
+    console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> map()");
+
+
+    const numArray = [1,2,3,4,5,6,7,8,9];
+
+    let mapArray = numArray.map((anything)=>{
+        return anything + 5;
+    })
+    console.log('numArray', numArray);
+
+    let mapArrayChain = numArray.map((num)=>{
+        return num * 10 
+    }).map((num2)=>{
+        return num2 + 2
+    }).filter((anything)=>{
+        return anything > 40
+    })
+    console.log('mapArrayChain',mapArrayChain);
+
+
+    
+
+    console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> reduce()");
+    
+    const number = [1,2,3]
+
+    let total = number.reduce((accmulator, currentValue)=>{
+        console.log(`accmulator : ${accmulator} currentValue : ${currentValue}`);
+        return accmulator + currentValue;    // current value means after adding the current number of that time
+    }, 0 );    // here 0 means the inittial value of the accmulator if we give 4 here the the accmulator value will become 4 and thn started adding with the array value from 4
+
+    console.log("total",total);
+
+
+    const number2 = [1,2,3]
+
+    let total2 = number.reduce((accmulator, currentValue)=>{
+        console.log(`accmulator : ${accmulator} currentValue : ${currentValue}`);
+        return accmulator + currentValue;    // current value means after adding the current number of that time
+    }, 4 );    // here 0 means the inittial value of the accmulator
+
+    console.log("total2",total2);
+
+
+
+
+    const shoppingCart = [
+        {
+            item : "laptop",
+            price : 150000
+        },
+        {
+            item : "phone",
+            price : 80000
+        },
+        {
+            item : "jacket",
+            price : 6000
+        },
+        {
+            item : "bag",
+            price : 2000
+        }
+    ]
+
+
+    let  cartTotal = shoppingCart.reduce((accmulator,item)=>{
+        return accmulator + item.price;
+    },0)
+
+    console.log('cartTotal',cartTotal);
 
 
     </script>

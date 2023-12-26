@@ -880,6 +880,554 @@
     ((name)=>console.log(`the name is ${name}`))("sam") ;
 
     ((age)=>{console.log(`the age is ${age}`);})(27);
+
+
+
+
+    console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> control flow");
+    
+    const monthNum = 2;
+
+    switch(monthNum) {
+        case 1:
+            console.log("Jan");
+            break;
+        case 2:
+            console.log("feb");
+            break;
+        case 3:
+            console.log("march");
+            break;
+        case 4:
+            console.log('april');
+            break;
+        default:
+            console.log('default');
+    }
+
+
+    const monthString = 'march'
+
+    switch(monthString)  {
+        case 'january':
+            console.log('january');
+            break;
+        case 'february':
+            console.log('february');
+            break;
+        case 'march':
+            console.log('march');
+            break;
+        case 'apirl':
+            console.log('april');
+            break;
+        default:
+            console.log('default');
+    }
+
+
+
+
+
+
+
+    console.log(">>>>>>>>>>>>>>>>>>>>>>>>>> Loop");
+
+     let somethingNew = "David"
+
+     for(i=0;i<somethingNew.length;i++){
+        console.log(somethingNew[i]);
+     }
+
+
+
+    let ios = 10;
+
+    while(ios<30){
+        ios++;
+        console.log(ios);
+    }
+
+
+
+
+    for(let i = 0; i<20; i++){
+        if(i === 7){
+            console.log("7 is printed", i);
+        }
+    }
+
+
+
+    
+
+
+    for(let i=0; i<=235; i++){
+        if(i===221){
+            for(let j=0;j<=10;j++){
+            console.log(`the table of ${i} is ${i}*${j} = ${i*j}`);
+        }
+        }
+    }
+
+
+
+    let heroArray = ['thor', 'ironman', 'spiderman', 'loki'];
+
+    for(let i=0; i<heroArray.length; i++){
+        console.log(`the array is ${heroArray[i]}`);
+    }
+
+
+    for(let i=0; i<11; i++){
+        if(i === 5){
+            console.log(`5 is detected`);
+            break;
+        }
+        console.log(`${i}`);
+    }
+
+    for(let i=0; i<11; i++){
+        if(i===3){
+            console.log("3 is detected");
+            continue;
+        }
+        console.log(i);
+    }
+
+
+
+
+
+    console.log(">>>>>>>>>>>>>>>>>>>>>>>>>> while loop");
+
+    let ekNumber = 10;
+
+    while(ekNumber<20){
+        ekNumber++;
+        console.log('using while loop  ++',ekNumber);
+    }
+
+
+    
+    let dusraNumber = 10;
+
+    while(dusraNumber<20){
+        dusraNumber=dusraNumber+2;
+        console.log('using while loop  +2',dusraNumber);
+    }
+
+
+    let ekArray = ['thor','spiderman','ironman','loki'];
+
+    let iArray = 0;
+
+    while(iArray<ekArray.length){
+        iArray++;
+        console.log(ekArray[iArray]);
+    }
+
+
+    let myArrNew1 = ['Ironman', 'Thor', 'Spiderman', 'Dr. Strange'];
+        
+        let arr444 = -1;    // this is the first initilization of the value, like we write in the for loop for(let i=0)
+
+        while (arr444 < myArrNew1.length) {
+            arr444++;
+            console.log(myArrNew1[arr444]);
+        }
+
+
+    let anArrayNew = ['thor', 'ironman', 'loki', 'spiderman'];
+
+    let arr39 = 0;
+
+    while(arr39<anArrayNew.length){
+        console.log(anArrayNew[arr39]);
+        arr39++;
+    }
+
+
+    let gf1 = [1,3,2,456,324,42343,212, [1676,366,2335,4456,3424,423443,2142], ['tht', 'gvshj', 'asjhgf', 'isartyh']]
+
+    let gf3 = gf1.flat(Infinity)
+
+    console.log(gf3);
+
+
+    let aNewNumber = 1;
+
+    do{
+        console.log(`the number is ${aNewNumber}`);
+        aNewNumber++;
+    }while(aNewNumber<=10)
+
+
+    console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>> for of loop");
+
+    let ekNayaArray = ['thor', 'ironman', 'loki', 'spiderman'];
+
+    for(const something of ekNayaArray){
+        console.log(something);
+    }
+
+    const numberWalaArray = [1,2,3,4,5,6,7];
+
+    for(const anything of numberWalaArray){
+        console.log(anything);
+    }
+
+    const ekString = "KuchBhi";
+
+    for(const anything of ekString){
+        console.log(anything);
+    }
+
+
+    const spaceString = "Let's Go!";
+    
+    for(let anything of spaceString){
+        if(anything = ' '){
+            console.log('space detected');
+            break;
+        }
+    }
+
+
+    let ekObject = new Map();
+
+    ekObject.set("In", "India");
+    ekObject.set("US", "United State");
+    ekObject.set("SP", "Spain");
+
+    for(let [anyKey, anyValue] of ekObject){
+        console.log(`key : ${anyKey} and it's value is : ${anyValue}`);
+    }
+    
+   
+
+    // we can not itrate an object using for of loop
+    
+    // let dusraObject = {
+    //     name : "Pratap",
+    //     age : 27,
+    //     job : "Web Developer",
+    // }
+    
+    // for(let [someKey, someValue] of dusraObject){
+    //     console.log(`key : ${someKey} and it's value is : ${someValue}`);
+    // }
+
+
+
+
+    console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> for in loop");
+
+
+    let yourObject = {
+        person : "someone",
+        job : "anything",
+        some : "anything",
+        language : "Java Script"
+    }
+    const {person, job, some} = yourObject;
+    console.log(person);
+
+    for(const anything in yourObject){
+        console.log(`key is : ${anything} and it's value is : ${yourObject[anything]}`);
+    }
+
+
+    const ekAurArray = [1,2,3,4,5,6,7];
+
+    for(const anything in ekAurArray){
+        console.log(`index value : ${anything} and array value : ${ekAurArray[anything]}`);
+    }
+
+
+    let ekAurObject = new Map();
+
+    ekObject.set("In", "India");
+    ekObject.set("US", "United State");
+    ekObject.set("SP", "Spain");
+
+    for(const anything in ekAurObject){
+        console.log('here');
+        console.log(anything);
+    }
+
+
+
+
+    console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> forEact loop");
+
+    const ekAurNayaArray=[1,2,3,4,5,'tt','gg','hh'];
+
+    ekAurNayaArray.forEach((anything)=>{
+        console.log(anything);
+    })
+
+
+    console.log('forEach using function');
+    const ekFunction=(anything)=>{
+        console.log(anything);
+    }
+
+    ekAurNayaArray.forEach(ekFunction);
+
+
+
+    const ekDusraArray = ['spiderman','ironman','thor','loki'];
+
+    ekDusraArray.forEach((value,index,array)=>{
+        console.log(value,index,array);
+    })
+
+
+
+    ekMeraArray = [
+        {
+            name:'ironman',
+            age:53,
+        },
+        {
+            name:'spiderman',
+            age:23,
+        },
+        {
+            name:'thor',
+            age:50,
+        },
+        {
+            name:'loki',
+            age:51
+        }
+    ]
+
+    ekMeraArray.forEach((anything)=>{
+        console.log(`name: ${anything.name} and the age: ${anything.age}`);
+    })
+
+
+
+    ekTumharaArray = [1,2,3,4,5,6,7];
+
+    const kuchBhi = ekTumharaArray.forEach((anything)=>{
+        return anything;
+    })
+
+    console.log(kuchBhi);
+
+
+
+
+
+    console.log(">>>>>>>>>>>>>>>>>>>>>>>>> filter");
+
+    let ekBarFirseArray = [1,2,3,4,5,6,7,8,9];
+
+
+    let filterArray = ekBarFirseArray.filter((anything)=>(anything>4));
+    console.log('filterArray',filterArray);
+
+
+    let filterArray2 = ekBarFirseArray.filter((anything)=>{
+        return anything<8
+    })
+    console.log('filterArray2',filterArray2);
+
+
+    let forEachArray = ekBarFirseArray.forEach((anything)=>{
+        if(anything>6){
+            console.log('forEachArray',anything);
+        }
+    })
+
+
+    let emptyArray = [];
+    let forEachArray2 = ekBarFirseArray.forEach((anything)=>{
+        if(anything<4){
+            emptyArray.push(anything);
+        }
+    })
+    console.log('forEachArray2/emptyArray',emptyArray);
+
+
+
+    const books = [
+        {
+            title : 'Book One',
+            genre : 'Computer Science',
+            publish : 1991,
+            edition : 2019
+        },
+        {
+            title : 'Book Two',
+            genre : 'Web Development',
+            publish : 1995,
+            edition : 2023
+        },
+        {
+            title : 'Book Three',
+            genre : 'HTML',
+            publish : 1990,
+            edition : 2023
+        },
+        {
+            title : 'Book Four',
+            genre : "CSS",
+            publish : 1990,
+            edition : 2023
+        },
+        {
+            title : 'Book Five',
+            genre : 'JavaScript',
+            publish : 1898,
+            edition : 2024
+        },
+        {
+            title : 'Book Six',
+            genre : 'React.js',
+            publish : 2011,
+            edition : 2024
+        },
+        {
+            title : 'Book Seven',
+            genre : 'Next.js',
+            publish : 2019,
+            edition : 2024
+        },
+        {
+            title : 'Book Eight',
+            genre : 'Next.js',
+            publish : 2020,
+            edition : 2023
+        },
+        {
+            title : 'Book Nine',
+            genre : 'Next.js',
+            publish : 2006,
+            edition : 2022
+        },
+        {
+            title : 'Book Ten',
+            genre : 'JavaScript',
+            publish : 2000,
+            edition : 2024
+        },
+        {
+            title : 'Book Eleven',
+            genre : 'JavaScript',
+            publish : 2008,
+            edition : 2024
+        },
+        {
+            title : 'Book Twelve',
+            genre : 'JavaScript',
+            publish : 2000,
+            edition : 2024
+        },
+        {
+            title : 'Book Thirteen',
+            genre : 'JavaScript',
+            publish : 1999,
+            edition : 2022
+        },
+        {
+            title : 'Book Fourteen',
+            genre : 'Web Development',
+            publish : 1998,
+            edition : 2022
+        },
+        {
+            title : 'Book Fifteen',
+            genre : 'Web Development',
+            publish : 1998,
+            edition : 2023
+        }
+    ]
+
+     
+    let bookFilter = books.filter((books)=>{
+        return (books.genre === 'JavaScript')
+    })
+    console.log('bookFilter',bookFilter);
+
+    let bookFilter2 = books.filter((books)=>{
+        if(books.genre === 'Web Development'){
+            console.log('bookFilter2',books);
+        }
+    })
+
+    let bookFilter3 = books.filter((books)=>{
+        if(books.genre === 'Next.js'){
+            console.log('bookFilter3',books.title);
+        }
+    })
+
+
+    books.forEach((anything) => {
+        if(anything.genre === 'JavaScript'){
+            console.log('using forEach',anything);
+        }
+    });
+
+    let bookFilter4 = books.filter((books)=>{
+        return(books.publish > 2000 && books.genre === 'Next.js')
+    })
+    console.log('publish > 2000',bookFilter4);
+
+
+
+    const numArray = [1,2,3,4,5,6,7,8,9];
+
+    let somethingElse = numArray.map((anything)=>{
+        return anything * 10;
+    }).map((anything)=>{
+        return anything + 4;
+    }).filter((anything)=>{
+        return anything > 50
+    })
+
+    console.log('somethingElse',somethingElse);
+
+    
+    const someBooks = [
+        {
+            title : 'Book One',
+            genre : 'Computer Science',
+            publish : 1991,
+            edition : 2019
+        },
+        {
+            title : 'Book Two',
+            genre : 'Web Development',
+            publish : 1995,
+            edition : 2023
+        },
+        {
+            title : 'Book Three',
+            genre : 'HTML',
+            publish : 1990,
+            edition : 2023
+        },
+        {
+            title : 'Book Four',
+            genre : "CSS",
+            publish : 1990,
+            edition : 2023
+        },
+    ]
+        let somethingBooks = someBooks.filter((anything)=>{
+            return anything.genre
+        })
+        console.log('something Books',somethingBooks);
+
+
+
+        
+
+
     </script>
 </body>
 </html>
