@@ -201,20 +201,20 @@
     
     const number = [1,2,3]
 
-    let total = number.reduce((accmulator, currentValue)=>{
-        console.log(`accmulator : ${accmulator} currentValue : ${currentValue}`);
-        return accmulator + currentValue;    // current value means after adding the current number of that time
-    }, 0 );    // here 0 means the inittial value of the accmulator if we give 4 here the the accmulator value will become 4 and thn started adding with the array value from 4
+    let total = number.reduce((accumulator, currentValue)=>{
+        console.log(`accumulator : ${accumulator} currentValue : ${currentValue}`);
+        return accumulator + currentValue;    // current value means after adding the current number of that time
+    }, 0 );    // here 0 means the inittial value of the accumulator if we give 4 here the the accumulator value will become 4 and thn started adding with the array value from 4
 
     console.log("total",total);
 
 
     const number2 = [1,2,3]
 
-    let total2 = number.reduce((accmulator, currentValue)=>{
-        console.log(`accmulator : ${accmulator} currentValue : ${currentValue}`);
-        return accmulator + currentValue;    // current value means after adding the current number of that time
-    }, 4 );    // here 0 means the inittial value of the accmulator
+    let total2 = number.reduce((accumulator, currentValue)=>{
+        console.log(`accumulator : ${accumulator} currentValue : ${currentValue}`);
+        return accumulator + currentValue;    // current value means after adding the current number of that time
+    }, 4 );    // here 0 means the inittial value of the accumulator
 
     console.log("total2",total2);
 
@@ -241,8 +241,8 @@
     ]
 
 
-    let  cartTotal = shoppingCart.reduce((accmulator,item)=>{
-        return accmulator + item.price;
+    let  cartTotal = shoppingCart.reduce((accumulator,item)=>{
+        return accumulator + item.price;
     },0)
 
     console.log('cartTotal',cartTotal);

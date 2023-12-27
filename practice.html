@@ -1397,32 +1397,37 @@
             title : 'Book One',
             genre : 'Computer Science',
             publish : 1991,
-            edition : 2019
+            edition : 2019,
+            price : 2000
         },
         {
             title : 'Book Two',
             genre : 'Web Development',
             publish : 1995,
-            edition : 2023
+            edition : 2023,
+            price : 1800
         },
         {
             title : 'Book Three',
             genre : 'HTML',
             publish : 1990,
-            edition : 2023
+            edition : 2023,
+            price : 3400
         },
         {
             title : 'Book Four',
             genre : "CSS",
             publish : 1990,
-            edition : 2023
-        },
+            edition : 2023,
+            price : 2700
+        }
     ]
-        let somethingBooks = someBooks.filter((anything)=>{
-            return anything.genre
-        })
-        console.log('something Books',somethingBooks);
+        
+        let bookTotal = someBooks.reduce((accumulator,item)=>{
+            return accumulator + item.price
+        }, 0);
 
+        console.log('bookTotal', bookTotal);
 
 
         
