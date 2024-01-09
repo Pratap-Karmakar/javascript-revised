@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 2</title>
+    <style>
+        .first{
+            background-color: green;
+            font-size: 30px;
+            font-weight: 700;
+            color: yellow;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body style="background-color: #212121; color: white;">
+    <h1 class="first">Learning DOM-2 on YouTube Video-32</h1>
+
+    <div class="parent parent2">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thrusday</div>
+    </div>
+
+
+
+    <script>
+        const parent = document.querySelector(".parent")
+        console.log(parent);
+        console.log(parent.children);
+        console.log(parent.children[1].innerHTML);
+
+        //                 let dayList = document.querySelectorAll(".day");
+        //                 console.log('dayList',dayList);
+
+        //                 let dayListArray = Array.from(dayList);
+        //                 console.log('dayListArray',dayListArray);
+
+        //                 dayListArray.forEach((item)=>{
+        //                 item.style.color="red"
+        //                 })
+        
+        // for(i=0; i<parent.children.length; i++){
+        //     console.log(parent.children[i].innerHTML);
+        // }
+
+        parent.children[1].style.color='orange'
+
+        console.log(parent.firstElementChild);
+        console.log(parent.firstElementChild.innerHTML);
+        console.log(parent.lastElementChild);
+        console.log(parent.lastElementChild.innerHTML);
+
+
+        const dayOne = document.querySelector(".day")
+        console.log('dayOne',dayOne);
+
+        console.log(dayOne.parentElement);
+
+        console.log(dayOne.nextElementSibling);
+
+        console.log('NODE : ', parent.childNodes);
+    </script>
+    
+
+</body>
+</html>

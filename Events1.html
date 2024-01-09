@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .something{
+            background-color: #212121;
+            color: white;
+        }
+    </style>
+</head>
+<body class="something">
+    <h1>Events in JS</h1>
+    <h2><span style="color: red;">Important Part ==> </span><span style="color: yellow;">Event Capturing and Event Propogation</span></h2>
+    <ul id="images">
+        <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+        <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+        <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+        <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+        <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+        <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+    </ul>
+    
+</body>
+<script>
+    // document.getElementById('owl').onclick = ()=>{alert("owl")}
+
+    // document.getElementById('owl').addEventListener('click',(e)=>{
+    //     // e.preventDefault();
+    //     alert("owl")
+    // })
+
+    document.querySelector('#owl').addEventListener('click',()=>{
+        alert('owl clicked again');
+    }, false)    // here false is the 3rd parameter which is default normally so we don't have to write but we should know about it 
+
+
+    document.querySelector("#owl").addEventListener('click',(event)=>{
+        console.log(event);
+        console.log(event.timeStamp);   // this is how we get the actual time when the mouse clicked 
+    })
+
+    //  examples  ==>>   type, timestamp defaultPrevent(preventDefault()), target toElement, srcElement, currentTarget, clientX, clientY, screenX, screenY, altKey, ctrlKey, shiftCode, keyCode
+
+
+
+
+    console.log(">>>>>>>>>>>>>>>>>>>>>>>>Event Capturing and Event Propogation");
+
+    // because of 'false'  it is called 'event propogation' (aka bubbling), this goes from bottom to top or from inside to outside, as here after clicking the prayer the prayer print first because the prayer is inside and then the ul
+    // document.querySelector('#images').addEventListener('click',(e)=>{
+    //     console.log('clicked inside the ul');
+    // }, false)
+    // document.querySelector('#prayer').addEventListener('click',(e)=>{
+    //     console.log('clicked prayer');
+    // }, false)
+
+
+
+    // because of 'true' it is called event capturing it is the opposite of event propoogation it goes top to bottom or from, as here when we clicked the prayer prints first and then the ul
+    // document.querySelector('#images').addEventListener('click',(e)=>{
+    //     console.log('clicked inside the ul');
+    // }, true)
+    // document.querySelector('#prayer').addEventListener('click',(e)=>{
+    //     console.log('clicked prayer');
+    // }, true)
+
+
+
+    // to stop propogation
+    document.querySelector('#images').addEventListener('click',(e)=>{
+        console.log('clicked inside the ul');
+    }, false)
+    document.querySelector('#prayer').addEventListener('click',(e)=>{
+        console.log('clicked prayer');
+        e.stopPropagation();    // using this method we can stop the propogation means, if we click on it then this function will executed for this click no other functions are not get executed
+    }, false)
+
+
+
+    document.querySelector('#google').addEventListener('click',(e)=>{
+        console.log('google clicked');
+        e.preventDefault()   // it will stop the loading to the google webpage
+        })
+
+
+
+
+
+</script>
+</html>

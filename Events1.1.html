@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.something{
+    background-color: #212121;
+    color: #fff;
+}
+</style>
+<body class="something">
+    <h1>Projects with Events in JS</h1>
+    <h2><span style="color: red;">Important Part ==> </span><span style="color: yellow;">Event Capturing and Event Propogation</span></h2>
+    <ul id="images">
+        <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+        <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+        <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+        <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+        <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+        <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+    </ul>
+
+    <script>
+        document.querySelector('#images').addEventListener('click',(e)=>{
+            console.log(e);
+            console.log(e.target);  // from where we click and the event occur it will print that location
+            console.log(e.target.parentNode);  // it will print the  parent 
+            console.log(e.target.tagName);  // it will print the tag name of the clicked item like-> img,div,p etc.
+
+
+            if(e.target.tagName === "IMG"){    
+                console.log(e.target.id);   // it will print the clicked item's id
+                // to remove the clicked item from the page
+                let removeItem = e.target.parentNode
+                removeItem.remove()   // 1sr approach
+                // removeItem.parentNode.removeClild(removeItem)   // 2nd approach watch video
+            }
+        },false)
+    </script>
+    
+</body>
+</html>

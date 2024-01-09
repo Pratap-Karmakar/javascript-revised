@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 2.1</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    
+</body>
+<!-- <script>
+    const div = document.createElement('div')
+    console.log(div);
+
+    div.className = "name"
+    // div.id = "myid"
+    div.id = Math.round(Math.random() * 10 + 1);
+
+    div.setAttribute("title", "genereted title")
+
+    div.style.backgroundColor='green'
+    div.style.padding='15px'
+
+    div.innerText="Chai aur Code"
+
+    const addText = document.createTextNode("YouTube")
+
+    div.appendChild(addText)
+
+    document.body.appendChild(div)
+</script> -->
+
+<script>
+    let div = document.createElement('div');
+    console.log(div);    
+    // div.setAttribute('id','someId')
+    div.setAttribute('className','someClass')
+    div.setAttribute('id', Math.round(Math.random()*10+1))
+    div.style.color='yellow'
+    div.style.backgroundColor='green'
+    div.style.padding='10px';
+    div.innerText='YouTube';
+    div.style.display='flex';
+    div.style.justifyContent='center'
+    document.body.appendChild(div)
+</script>
+</html>

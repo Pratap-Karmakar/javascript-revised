@@ -34,7 +34,7 @@ console.log(title.innerHTML);   // it will give the whole html value and will sh
 
 console.log(document.getElementsByClassName('heading'));
 
-console.log(document.querySelector('h2'));  // it will select the 1st h2 tag
+console.log('querySelector h2',document.querySelector('h2'));  // it will select the 1st h2 tag
 // console.log(document.querySelectorAll("h1")); // it will select all the h1 tags are available there
 console.log(document.querySelector("#title"));
 console.log(document.querySelector(".heading"));
@@ -80,3 +80,5 @@ calssArrayList.forEach((item)=>{
 calssArrayList.forEach((item)=>{
     item.style.padding='10px'
 })
+
+
