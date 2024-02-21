@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <h1 id="first">Chai Aur Code</h1>
+    <h1 id="second">Second</h1>
+    <h1 class="third">Press the button</h1>
+    <h2>setTimeout()-clearTimeout(), setInterval()-clearInterval()</h2>
+    <button id="stop">Stop</button>
+    <button id="change">Change Text</button>
+
+
+    <script>
+
+        // it will print the name only once after 2 seconds and then stops
+        setTimeout(()=>{
+            console.log("Pratap");
+        },2000)
+
+
+        // it will print the name continously in each 3 seconds and don't stop
+        setInterval(()=>{
+            console.log("Pratap Ksrmakar");
+        },3000)
+
+
+
+        // first use setInterval to print something in each 2sec then use clearInterval to stop it but inside a setTimeout funtion to execute it after 10sec
+        const pause = setInterval(()=>{
+            console.log('Print Something');
+        },2000);
+
+        setTimeout(()=>{
+            clearInterval(pause)
+        },10000)
+
+
+        const simpleFuntion =()=>{
+            console.log('simpleFuntion');
+        }
+
+        // here we need to give only the function not the braces()
+        setTimeout(simpleFuntion, 4000);
+
+
+        
+        // to change the html after 5sec
+        let changeText = document.querySelector("#first");
+
+        setTimeout(()=>{
+            changeText.innerHTML = "Kya be!"
+        },5000)
+
+
+       
+
+        // using function
+        const secondText=()=>{
+            document.querySelector("#second").innerHTML = 'Kuch nahi!'
+        }
+
+        setTimeout(secondText, 10000)
+
+
+
+
+        // stopped the setTimeout of the third h1 using clearTimeout()
+        
+        let thirdText = document.querySelector('.third')
+
+        const thirdTextChange =()=>{
+            thirdText.innerHTML = 'change using setTimeout()'
+        }
+        
+        let stopIt = setTimeout(thirdTextChange,5000);
+
+
+
+        // stop function
+        let stopButton = document.querySelector('#stop');
+
+        stopButton.addEventListener('click',()=>{
+            clearTimeout(stopIt);
+            console.log('Stopped');
+        })
+
+
+
+
+
+
+        //  >>>>>>>>>>>>>>>>>>>>>>>     which runs first        >>>>>>>>>>>>>>>>>>>
+        const gg=()=>{
+        console.log('1');
+        setTimeout(() => {
+        console.log('2');
+        }, 0);
+        console.log('3');
+        }
+        gg();
+
+
+    </script>
+</body>
+</html>

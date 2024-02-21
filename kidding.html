@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+  <h1 id="first">Chai Aur Code</h1>
+  <h1 id="second">Second</h1>
+  <h1 class="third">Press the button</h1>
+  <h2>setTimeout()-clearTimeout(), setInterval()-clearInterval()</h2>
+
+  <h1 id="textcode">Test Code</h1>
+  <button id="button1">change text 1</button>
+  <button id="button2">change text 2</button>
+  <button id="start">Start</button>
+  <button id="stop">Stop</button>
+
+  <button id="colorstart">Color Start</button>
+  <button id="colorstop">Color Stop</button>
+  
+
+
+  <script>
+    setTimeout(()=>{
+      console.log("setTimeout");
+    }, 2000)
+
+
+    const someSetTimeout=()=>{
+      console.log("setTimeout inside the function");
+    }
+    setTimeout(someSetTimeout , 4000)
+
+
+    setInterval(()=>{
+      console.log('setInterval');
+    }, 2000)
+
+
+    const someSetInterval=()=>{
+      console.log("setInterval inside the function");
+    } 
+    setInterval(someSetInterval , 4000)
+
+
+
+    // changing the text content usig seTimeOut
+    let changeText=()=>{
+      let text = document.querySelector("#first");
+      text.innerHTML = "Changing the text using setTimeout"
+    }
+    setTimeout(changeText, 4000)
+
+    // different appoach
+    let textPath = document.querySelector("#second");
+
+    setTimeout(()=>{
+      textPath.innerHTML = ' changing the text using different apporach'
+    }, 6000)
+
+
+    const sayHello = setInterval(()=> console.log("hiiiiiiiiiiiiiii"), 3000);
+
+    clearInterval(sayHello)
+
+  
+
+
+    let textcode = document.querySelector('#textcode');
+
+    let button1 = document.querySelector('#button1');
+
+    button1.addEventListener('click',()=>{
+      setTimeout(()=>{
+        textcode.innerHTML = 'changed the text by using the setTimeout function'
+      },4000)
+    })
+
+
+
+    let referenceFunction; // it should be a global variable
+
+    let start = document.querySelector('#start');
+    let stop = document.querySelector('#stop');
+
+    start.addEventListener('click', () => {
+      
+      // const referenceThing, if we do this then it will get restricted by the scope that's we need to do it globllay 
+      referenceFunction = setInterval(() => {
+        console.log('Printing hi using the start button');
+      }, 300);
+    });
+
+    stop.addEventListener('click', () => {
+      // Clear the interval using the stored interval ID
+      clearInterval(referenceFunction);
+    });
+
+
+
+
+
+
+    // creating a div and changing it's color in every 2sec
+
+    let colorDiv = document.createElement('div');
+    colorDiv.setAttribute("id","colordiv");
+    colorDiv.style.marginTop = '10px'
+    colorDiv.style.width = '200px'
+    colorDiv.style.height = '200px'
+    // colorDiv.style.backgroundColor = 'red'
+    document.querySelector("body").appendChild(colorDiv)
+    console.log('colordiv',colorDiv);
+
+    let colorStart = document.querySelector('#colorstart')
+    let colorStop = document.querySelector('#colorstop')
+
+
+    // 
+    let randomColor = Math.random().toString(16).slice(2,8);
+    
+    
+    colorStart.addEventListener('click',()=>{
+      setInterval(()=>{
+        colorDiv.style.backgroundColor = `#${randomColor}`
+      },2000)
+    })
+
+  </script>
+</body>
+</html>

@@ -185,14 +185,16 @@
     })
     console.log('numArray', numArray);
 
-    let mapArrayChain = numArray.map((num)=>{
+    console.log('?????????????????????????????????????? function chain');
+
+    let functionChain = numArray.map((num)=>{
         return num * 10 
     }).map((num2)=>{
         return num2 + 2
     }).filter((anything)=>{
         return anything > 40
     })
-    console.log('mapArrayChain',mapArrayChain);
+    console.log('functionChain',functionChain);
 
 
     

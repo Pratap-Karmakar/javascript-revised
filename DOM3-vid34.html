@@ -1,42 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .bg-color{
+            background-color: #212121;
+            color: white;
+        }
+    </style>
 </head>
-<body style="background-color: #212121; color: white;">
+<body class="bg-color">
 
     <ul class="language">
         <li>JavaScript</li>
     </ul>
-
-</body>
-
-<script>
-
-    console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> add');
-    const addLanguage=(name)=>{
-        let li = document.createElement('li');
-        li.innerHTML = name;
-        let path = document.querySelector('.language');
-        path.appendChild(li);
-    }
-    addLanguage('java');
-
-    const addOptiLanguage=(name)=>{
-        let li = document.createElement('li');
-        let addText = document.createTextNode(name);
-        li.appendChild(addText);
-        let path = document.querySelector('.language');
-        path.appendChild(li);
-    }
-    addOptiLanguage('typescript')
-
-    console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> edit');
-    let secondLanguage = document.querySelector('li:nth-child(2)');
     
-    let addText = document.createTextNode('mojo');
-    secondLanguage.replaceChild(addText)
-</script>
+
+  <script>
+
+    // normal way
+    let path = document.querySelector('.language');
+    let li = document.createElement('li');
+    li.innerText = 'TypeScript';
+    path.appendChild(li);
+
+    // using function
+    const addLanguage=(languageName)=>{
+        let path = document.querySelector('.language');
+        let li = document.createElement('li');
+        li.innerHTML = languageName;
+        path.appendChild(li);
+    }
+    addLanguage('C++')
+
+
+    // using optimized function
+   const addOptiLanguage=(langName)=>{
+    const path = document.querySelector('.language');
+    const li = document.createElement('li');
+    const addText = document.createTextNode(langName);
+    li.appendChild(addText);
+    path.appendChild(li);
+   }
+   addOptiLanguage('Python')
+
+
+
+    // Edit text using DOM
+    const selectLanguage = document.querySelector('li:nth-child(2)');
+    const newLi = document.createElement('li');
+    const newText = document.createTextNode('anything');
+    newLi.appendChild(newText);
+    selectLanguage.replaceWith(newLi)
+
+
+    // edit text using optimized function
+    const editText =(target,langName)=>{
+        const path = document.querySelector(`${target}`);
+        const newLi = document.createElement('li');
+        const newText = document.createTextNode(`${langName}`);
+        newLi.appendChild(newText);
+        path.replaceWith(newLi);
+    }
+    editText('li:nth-child(3)', "KuchBhi")
+
+
+    // delete one li
+    const removeLi=(target)=>{
+        let select = document.querySelector(`${target}`)
+        select.remove();
+    }
+    removeLi('li:last-child')     // after calling this function Python get removed
+
+  </script>
+</body>
 </html>

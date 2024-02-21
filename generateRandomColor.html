@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Click start and the Background-Color will change in every 1sec</h1>
+
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+
+    <script>
+        
+        let start = document.querySelector("#start")
+        let stop = document.querySelector("#stop")
+        let body = document.querySelector("body")
+
+        let intervalId;
+
+
+        // this function will generate the random color
+        const randomColor =()=>{
+            return Math.random().toString(16).slice(2,8)
+        }
+        
+        
+        // this function will change the background color using the randomColor
+        const changeBackgroundColor=()=>{
+            body.style.backgroundColor = `#${randomColor()}`
+        }
+
+
+        // this function will change the background color in every 1sec
+        const startChangingColor=()=>{
+            // it will check if the intervalId is null only then it will procede 
+            if(intervalId == null){
+                intervalId = setInterval (changeBackgroundColor, 1000);
+            }
+        }
+
+
+        // this function will stop the color changing
+        const stopChangingColor=()=>{
+            clearInterval(intervalId)
+            // it will clear the memory by setting the intervalId to null
+            intervalId = null;
+        }
+
+
+        start.addEventListener("click", startChangingColor)
+        stop.addEventListener("click", stopChangingColor)
+    </script>
+</body>
+</html>
