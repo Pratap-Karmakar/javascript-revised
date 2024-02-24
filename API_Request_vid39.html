@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+                        border: 1px solid #6e6969;
+                    }
+    </style>
+</head>
+<body style="background-color: #212121; color: #b9b2b2;">
+    <a target="_blank" style="color: #b9b2b2; " href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">Main Link</a>
+    <a style="color: #b9b2b2; margin-left: 20px;" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState">XMLHttpRequest: readyState property</a>
+    <table style="margin-top: 25px;">
+        <tr >
+            <th>Value</th>
+            <th>State</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>UNSENT</td>
+            <td>Client has been created. open() not called yet.</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>OPENED</td>
+            <td>open() has been called.</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>HEADERS_RECEIVED</td>
+            <td>send() has been called, and headers and status are available.</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>LOADING</td>
+            <td>Downloading; responseText holds partial data.</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>DONE</td>
+            <td>The operation is complete.</td>
+        </tr>
+    </table>
+
+    <button id="cardButton" style="background-color: rgb(213, 211, 64); color: #212121; padding: 10px; margin: 30px;">View Card</button>
+
+    <div id="card">
+    </div>
+
+
+    <script>
+        const card = document.querySelector("#card")
+        const button = document.querySelector("#cardButton")
+
+        const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', requestUrl);
+        // it will continue monitor the state
+        xhr.onreadystatechange=function(){
+            console.log(xhr.readyState);
+            // to detected the state
+            if(xhr.readyState === 4){
+                // we are working on current context that's why we need to use this
+                // we can name anything to the data which is comming from the 
+                // console.log(this.responseText);
+                // we can convert a string in to number like Number("2"), we can convert a number in to string String(2), similarly we can conver a string in to JSON using JSON.parse(). here parse convert te string in to JSON
+                const data = JSON.parse(this.responseText);
+                console.log(data.followers);
+
+                button.addEventListener("click",()=>{
+                    let div = document.createElement('div')
+                    div.setAttribute('id', 'newDiv');
+                    let divStyle = div.style
+                    divStyle.border = "2px brown solid"
+                    divStyle.width='300px'
+                    divStyle.heigth='300px'
+                    div.innerHTML = `<div>
+                                        <img width="200px" height="200px" src=${data.avatar_url}>
+                                        <h1>Followers = ${data.followers}</h1>
+                                    </div>`
+                card.appendChild(div)
+                })
+            }
+        }
+        xhr.send()
+
+    </script>
+
+</body>
+</html>
