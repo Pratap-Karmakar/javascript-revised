@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        function setName(username){
+            this.username = username;
+            console.log('called');
+        }
+
+        function createUser(userame, email, password){
+            
+            // whenever we call the setName function, the function is getting called but it's execution contex it getting deleted so the date is not getting passed to this function and for this reason to hold the reference we are using '.call' \
+            // here the meaning this "this" is we are giving the createUser's contex to the setName function and then the setName function will user this "this" and pass the data
+            setName.call(this, userame)
+            
+            this.email = email;
+            this.password = password;
+        }
+
+        const newUser = new createUser("SomeName", "SomeName@fb.com", '1234');
+        console.log(newUser);
+    </script>
+</body>
+</html>

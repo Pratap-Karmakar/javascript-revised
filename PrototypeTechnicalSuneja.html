@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        
+        // Technical Suneja
+
+        // Prototypal Inheritance
+        const obj = {
+            name : "Some Name",
+            roll : 21,
+            dept : "HTML"
+        }
+
+        const obj2 = {
+            roll : 21,
+            __proto__ : obj,
+        }
+
+        console.log("accessing the name from obj object in the obj2 object", obj2.name);
+        console.log(obj2);
+
+
+        let hero = ["Ironman", "Spiderman"];
+
+        Array.prototype.convertIntoObject= function (){
+            let newObj = {};
+            this.forEach((element)=>{
+                newObj [element] = element;
+            })
+            return newObj;
+        }
+
+        console.log(hero.convertIntoObject());
+        
+
+        function myPrototype(name){
+            this.name = name;
+        }
+        
+        const myProto = new myPrototype("Some Name")
+
+        myPrototype.prototype = obj;
+
+        console.log('myProto',myProto);
+        // console.log(myProto.getName());
+
+    </script>
+</body>
+</html>

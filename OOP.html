@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        
+        // object - collection of properties and methodes
+        
+        let user={
+            userName : "Some Name",
+            loginCount : 4,
+            signIn : true,
+            getUserDetail : function(){
+                // console.log(`the userName is ${this.userName}`);
+                console.log(this);
+            }
+
+        }
+
+        console.log(user.getUserDetail());
+
+        console.log('global this',this);
+
+
+        // Constructor function
+        // Prototypes
+        // Classes
+        // Instances (new, this)
+
+
+        // 4 Pillara
+
+        // 1. Abstraction
+            //   -->  to hide the details, like  fetch, in fetch we don't know it does internally or what it all the process 
+        // 2. Encapsulation
+            //   -->  
+        // 3. Inheritance
+            //   -->
+        // 4. Polymorphism
+
+
+
+
+        // constructor function
+        // >>>>>>>>>>>>>>>>>>>>>>>>>> Importance of "new" keyword
+
+        function userFunction (userName, loginCount, isLoggedIn){
+            this.userName = userName;
+            // we can give anything because we are setting up variable here
+            this.anythingLoginCount = loginCount;
+            this.isLoggedIn = isLoggedIn;
+
+            this.greeting = function(){
+                console.log(`welcome ${this.userName}`);
+            }
+            
+            //  we have to passon the "this" here for furthur
+            return this
+        }
+
+        let userOne = userFunction('sam', 12, true)
+        // let userTwo = userFunction('andrew', 10, false)  // it will overwrite the userOne
+        
+        console.log('userOne',userOne);
+        
+        // let userOne = new userFunction("sam", 12, true)     // new keyword means it will using a new instance
+
+        // whenever we use "new" keyword the first step is a new instance or a new empty oject is created and then in the second step is a constructor function is call for the new keyword, then in the third step in the "this" keyword all the arguments were injected and in the last and fourth step we get everything in "this" 
+
+
+        // let userTwo = new userFunction('andrew', 10, false)  
+
+    </script>
+</body>
+</html>

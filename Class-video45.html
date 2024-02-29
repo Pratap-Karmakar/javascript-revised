@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        class user  {
+            constructor(username, email, password){
+                this.username = username;
+                this.email = email;
+                this.password = password;
+            }
+            // we don't need to write function before the function name to create a function, just write the name of the function in class  the funcion became methode;
+            encryptPassword(){
+                return (`${this.password}@abc`)
+            }
+            changeUserName(){
+                return (`${this.username.toUpperCase()}`)
+            }
+        }
+
+        const newUser = new user('Some Name', 'somename@fb.com', '123');
+        console.log(newUser.encryptPassword());
+        console.log(newUser.changeUserName());
+
+
+
+        // create without using class
+        function userNew (username2, email2, password2){
+            this.username2 = username2;
+            this.email2 = email2;
+            this.password2 = password2;
+        }
+
+        Object.prototype.encryptPassword2 = function(){
+            return (`${this.password2}@rrr`);
+        }
+
+        userNew.prototype.changeName2 = function(){
+            return(`${this.username2.toUpperCase()}`)
+        }
+
+        const someuser = new userNew("ll name", 'll@email.com', 'lll');
+        console.log('try',someuser.encryptPassword2());
+        console.log('try',someuser.changeName2());   
+    </script>
+</body>
+</html>
