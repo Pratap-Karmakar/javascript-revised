@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        class User {
+            constructor(email, password)
+            {
+                this.email = email;
+                this.password = password;
+            }
+
+            // if we don't want the user not to show the actual password then we can encrypt the password this way
+
+            // as constructor is already stting the value this.password and here in getter and setter will also set the value of password so we need to change the name of the password here this._passeord
+            get password(){
+                // return this._password.toUpperCase(); 
+                return (`${this._password}pratap`)
+            }
+
+            // set is accepting the returned value from the set password
+            set password(anything){
+                this._password = anything;
+            }
+
+            get email(){
+                return this._email.toUpperCase();
+            }
+            set email(anything){
+                this._email = anything
+            }
+        }
+
+        const pratap = new User('prapap@google.com', 'abc');
+        console.log(pratap.password);
+        console.log(pratap.email);
+    </script>
+</body>
+</html>

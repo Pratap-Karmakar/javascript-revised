@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+
+
+
+
+    <script>
+
+      // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Lexical Scoping
+
+      function outer(){
+        const userName = "Some Name";
+
+        function innerOne(){
+
+          const secret = 'abc123'
+          console.log('Inner One', userName);  // print
+
+          function innerInner(){
+            // console.log("Inner Inner", username);  // will not print
+            console.log('secret', secret);  // print
+          }
+
+          innerInner();
+        }
+
+        function innerTwo(){
+          console.log('Inner Two', userName); // print
+          // console.log('secret', secret); // will not print
+        }
+
+        innerOne();
+        innerTwo();
+
+      }
+      outer();
+      console.log('Outside from the outer funtion', userName);  // will not print
+
+
+      
+
+
+
+    </script>
+  </body>
+</html>

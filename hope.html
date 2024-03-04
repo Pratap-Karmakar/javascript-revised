@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+            const arr = [1,2,4,'g','f'];
+
+            for(const some of arr){
+                console.log(some);
+            }
+
+            for(const some in arr){
+                console.log(arr[some]);
+            }
+
+            // const obj ={
+            //     name : 'pratap',
+            //     dept : 'com sci',
+            //     isAvailable : true,
+            //     mail : 'pratap@google.com',
+            //     fun : function(){
+            //         console.log(`the name is ${this.name}`);
+            //     }
+            // }
+
+            // for(const some in obj){
+            //     console.log(`key ${some}, value ${obj[some]}`);
+            // }
+
+            // for(const some of obj){
+            //     console.log(`key ${some}, value ${obj[some]}`);
+            // }
+
+            // for (const some in obj){
+            //     console.log(` key ${some}, value ${obj[some]}`);
+            // }
+
+            // let name = 'spider man'
+
+            // for(const some of name){
+            //     console.log('for of',some);
+            // }
+
+            // for(let i = 0; i<name.length; i++){
+            //     console.log('for loop',name[i]);
+            // }
+
+            // for(const some in name){
+            //     console.log('for in',name[some]);
+            // }
+
+
+            let map = new Map();
+
+            map.set('name', 'somename');
+            map.set('mail', 'somename@fb.com');
+            map.set('isLoggedin', true);
+
+            // console.log(typeof map);
+
+            for (const [key, value] of map){
+                console.log(`key ${key}, value ${value}`);
+            }
+
+    </script>
+</body>
+</html>

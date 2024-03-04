@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        
+        // Math is the module and PI is the property
+        console.log(Math.PI);
+        
+        Math.PI = 5      // we can't change it's value 
+        console.log(Math.PI);
+        
+        let descriptor = console.log('rrr',Object.getOwnPropertyDescriptor(Math, 'PI'));
+
+        console.log(descriptor);    // here we can see that writable is 'false' that's why we can not change the value
+        // we can do this to our selfMade object too
+
+        const chai = {
+            name : "ginger chai",
+            price : 250,
+            isAvailable : true
+        }
+
+        console.log('gggg',chai);
+
+
+        // here we need to give the module name which is 'chai' and which is our object and the property name is 'name'
+        let descriptorOfChai = Object.getOwnPropertyDescriptor(chai, 'name');
+
+        console.log(descriptorOfChai);  // here we can see that in our object 'writable' is true means we can change it's value
+
+        // now we mane the 'writable = true' to 'writable = false'
+        Object.defineProperty(chai , 'name' ,
+        {
+            writable : false, 
+            enumerable : false,
+        })
+
+        let descriptorOfChaiNew = Object.getOwnPropertyDescriptor(chai, 'name');
+
+        console.log('jjjjj',descriptorOfChaiNew);
+
+
+        // now try to change the name property of object chai
+        chai.name = 'something'
+
+        console.log(chai);    // here we can see that we can
+
+        </script>
+</body>
+</html>
